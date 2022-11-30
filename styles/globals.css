@@ -6,10 +6,23 @@
 
 @layer base {
   html {
+    @apply scroll-smooth;
     font-family: "Poppins", sans-serif;
   }
 
   body {
     background: #f8fafc;
+  }
+
+  @media (min-width: 600px) {
+    :root {
+      --rsbs-max-w: 70%;
+      --rsbs-ml: auto;
+      --rsbs-mr: auto;
+    }
+  }
+
+  .bottom-safe {
+    bottom: calc(1rem + env(safe-area-inset-bottom));
   }
 }
