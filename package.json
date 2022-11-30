@@ -6,13 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "ngrok": "ngrok http 3000",
     "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.4",
+    "framer-motion": "^7.5.3",
     "next": "12.1.6",
     "react": "18.1.0",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-icons": "^4.4.0",
+    "react-spring-bottom-sheet": "^3.5.0-alpha.0"
   },
   "devDependencies": {
     "@types/node": "17.0.36",
