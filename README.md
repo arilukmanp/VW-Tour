@@ -5,7 +5,7 @@
 
 &nbsp;
 
-## Development environment installation :whale:
+## Development environment installation
 
 **1. Download or clone repo**
 
