@@ -10,10 +10,11 @@ module.exports = {
     extend: {
       fontFamily: {},
       colors: {
+        whiteBone: "#f8fafc",
         orangeSoft: "#ff7b29",
         cyanBlue: "#31c3e0",
         limeGreen: "#d3ed68",
-        darkBlue: "#132842"
+        darkBlue: "#132842",
       },
       prefix: "hs-",
       screens: {

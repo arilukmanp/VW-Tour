@@ -1,4 +1,4 @@
-<h1 align="center">VW Wisata :airplane:</h1>
+<h1 align="center">VW Tour :oncoming_automobile:</h1>
 
 <p align="center">A booking web tour made with Next.js and Tailwind CSS</p>
 
@@ -36,14 +36,4 @@ yarn dev
 &nbsp;
 
 **4. Viola**
-<p>Now you can access [`http://localhost:3000`](http://localhost:3000) with your browser to see the result.</p>
-
-&nbsp;
-
-<!-- ## Screenshots
-
-![ ](.screenshots/login.png "Login")
-![ ](.screenshots/add-trip.png "Add Trip")
-![ ](.screenshots/trips-list.png "Trips List")
-![ ](.screenshots/add-expense.png "Add Expense")
-![ ](.screenshots/trip-detail.png "Trip") -->
+<p>Now you can access http://localhost:3000 with your browser to see the result.</p>
