@@ -4,7 +4,6 @@ module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./sections/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -17,9 +16,9 @@ module.exports = {
         darkBlue: "#132842",
       },
       prefix: "hs-",
-      screens: {
-        "2xl": "1320px",
-      },
+      // screens: {
+      //   "2xl": "1320px",
+      // },
       animation: {
         "bounce-short": "bounce-short 1s .5",
       },

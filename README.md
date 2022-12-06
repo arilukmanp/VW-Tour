@@ -1,4 +1,4 @@
-<h1 align="center">VW Tour :oncoming_automobile:</h1>
+<h1 align="center">VW Tour  :oncoming_automobile:</h1>
 
 <p align="center">A booking web tour made with Next.js and Tailwind CSS</p>
 
@@ -35,5 +35,5 @@ yarn dev
 
 &nbsp;
 
-**4. Viola**
-<p>Now you can access http://localhost:3000 with your browser to see the result.</p>
+**4. Viola** <br>
+Now you can access http://localhost:3000 with your browser to see the result.
