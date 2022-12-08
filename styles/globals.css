@@ -14,7 +14,7 @@
     background: #fff;
   }
 
-  @media (min-width: 600px) {
+  @media (min-width: 768px) {
     :root {
       --rsbs-max-w: 70%;
       --rsbs-ml: auto;
@@ -24,5 +24,21 @@
 
   .bottom-safe {
     bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+
+  a:focus {
+    outline: none !important;
+  }
+
+  /* Hide Arrow Number Input on Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Hide Arrow Number Input on Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 }
