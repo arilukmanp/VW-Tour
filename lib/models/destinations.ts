@@ -94,4 +94,59 @@ export const destinationsData: DestinationInterface[] = [
       "Dagi Hill by Manohara merupakan resto yang menawarkan view candi dengan latar belakang pegunungan Menoreh di sisi selatan dari atas bukit Dagi, menikmati sajian masakan bertema outdoor picnic set.",
     location: "Taman Wisata Candi Borobudur",
   },
+  {
+    category: DestinationCategory.Tour,
+    image: [
+      "taman-kelinci/kelinci_1.webp",
+      "taman-kelinci/kelinci_2.webp",
+      "taman-kelinci/kelinci_3.webp",
+      "taman-kelinci/kelinci_4.webp",
+    ],
+    title: "Taman Kelinci",
+    description:
+      "Ditaman kelinci ini pengunjung dapat berinteraksi secara langsung. Mulai memberi makan kacang panjang, bermain dan berfoto bersama kelinci yang dibiarkan bebas berkeliaran di area taman kelinci. Taman kelinci merupakan bagian dari wahana desa Bahasa Borobudur.",
+    location: "Ngargogondo, Kec. Borobudur",
+    price: 20_000,
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "lebah-madu/madu_1.webp",
+      "lebah-madu/madu_2.webp",
+      "lebah-madu/madu_3.webp",
+    ],
+    title: "Penangkaran Lebah Madu",
+    description:
+      "Ashfa Madu merupakan tempat peternakan lebah yang menghasilkan madu alami. Pengunjung dapat melihat langsung proses untuk menghasilkan madu hingga dapat dikonsumsi.",
+    location: "Tanjungsari, Kec. Borobudur",
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "kopi-luwak/luwak_1.webp",
+      "kopi-luwak/luwak_2.webp",
+      "kopi-luwak/luwak_3.webp",
+      "kopi-luwak/luwak_4.webp",
+      "kopi-luwak/luwak_5.webp",
+      "kopi-luwak/luwak_6.webp",
+      "kopi-luwak/luwak_7.webp",
+    ],
+    title: "Kopi Luwak (Pawon Luwak Coffee)",
+    description:
+      "Pawon Luwak Coffee merupakan tempat wisata edukasi pengenalan proses pembuatan kopi luwak dari sisa proses kotoran luwak/musang hingga bisa diseduh. Pengunjung juga bisa menikmati kopi luwak tersebut sambil melihat luwak yang lucu-lucu.",
+    location: "Wanurejo, Kec. Borobudur",
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "jamur/jamur_1.webp",
+      "jamur/jamur_2.webp",
+      "jamur/jamur_3.webp",
+      "jamur/jamur_4.webp",
+    ],
+    title: "Budidaya Jamur",
+    description:
+      "Wisata edukasi tentang cara budidaya jamur serta hasil olahannya dapat dibawa pulang sebagai oleh-oleh.",
+    location: "Wanurejo, Kec. Borobudur",
+  },
 ];
