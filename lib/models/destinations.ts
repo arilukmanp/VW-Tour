@@ -149,4 +149,56 @@ export const destinationsData: DestinationInterface[] = [
       "Wisata edukasi tentang cara budidaya jamur serta hasil olahannya dapat dibawa pulang sebagai oleh-oleh.",
     location: "Wanurejo, Kec. Borobudur",
   },
+  {
+    category: DestinationCategory.Education,
+    image: ["batik/batik_1.webp", "batik/batik_2.webp", "batik/batik_3.webp"],
+    title: "Batik",
+    description:
+      "Tingal Art Borobudur merupakan tempat edukasi tentang produksi batik rumahan, pengunjungan juga dapat praktik membuat batik dan bisa dibawa pulang langsung.",
+    location: "Wanurejo, Kec. Borobudur",
+    price: 20_000,
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "gerabah/gerabah_1.webp",
+      "gerabah/gerabah_2.webp",
+      "gerabah/gerabah_3.webp",
+    ],
+    title: "Kerajinan Gerabah",
+    description:
+      "Pengalaman menarik bagi wisatawan yang ingin mencoba membuat sendiri kerajinan dari tanah liat (lempung) atau gerabah. Di Dusun Nglipoh ini memang sudah lama dikenal sebagai sentra kerajinan gerabah. Sebagian besar penduduknya adalah perajin gerabah.",
+    location: "Karanganyar, Kec. Borobudur",
+    price: 30_000,
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "gula-jawa/gula_1.webp",
+      "gula-jawa/gula_2.webp",
+      "gula-jawa/gula_3.webp",
+      "gula-jawa/gula_4.webp",
+      "gula-jawa/gula_5.webp",
+    ],
+    title: "Home Industry Gula Jawa",
+    description:
+      "Tempat ngopi dan edukasi gula jawa. Minum kopi dengan cara menggigit gula Jawa mungkin sudah sangat lama dilupakan orang jaman sekarang. Moment itulah yang kembali ingin diciptakan oleh Gubuk Kopi Borobudur dalam menyajikan kopi lokal kepada pengunjung.",
+    location: "Sendaren, Kec. Borobudur",
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "rengginang/rengginang_1.webp",
+      "rengginang/rengginang_2.webp",
+      "rengginang/rengginang_3.webp",
+      "rengginang/rengginang_4.webp",
+      "rengginang/rengginang_5.webp",
+      "rengginang/rengginang_6.webp",
+      "rengginang/rengginang_7.webp",
+    ],
+    title: "Home Industry Rengginang",
+    description:
+      "Merupakan tempat produksi snack khas Borobudur khususnya makanan rengginang. Di sini juga pengunjung dapat melihat ikut praktik membuat rengginang.",
+    location: "Wanurejo, Kec. Borobudur",
+  },
 ];
