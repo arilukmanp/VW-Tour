@@ -201,4 +201,61 @@ export const destinationsData: DestinationInterface[] = [
       "Merupakan tempat produksi snack khas Borobudur khususnya makanan rengginang. Di sini juga pengunjung dapat melihat ikut praktik membuat rengginang.",
     location: "Wanurejo, Kec. Borobudur",
   },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "godhong/godhong_1.webp",
+      "godhong/godhong_2.webp",
+      "godhong/godhong_3.webp",
+      "godhong/godhong_4.webp",
+      "godhong/godhong_5.webp",
+    ],
+    title: "Godhong Pawon (membatik diatas daun)",
+    description:
+      "Merupakan sebuah galeri handycraft dengan bahan baku tulang berbagai jenis daun, Pengunjung dapat belajar membatik diatas daun atau souvenir lainnya.",
+    location: "Wanurejo, Kec. Borobudur",
+    price: 20_000,
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "kambing-etawa/kambing_1.webp",
+      "kambing-etawa/kambing_2.webp",
+      "kambing-etawa/kambing_3.webp",
+    ],
+    title: "Susu Kambing Etawa",
+    description:
+      "Kandang Purnama merupakan tempat peternakan kambing yang menghasilkan susu dan olahan susu kambing. Pengunjung dapat melihat dan praktik langsung proses dari memerah susu sampai membuat susu bubuk, aktivitas lain seperti memberi susu ke anak kambing atau memberi makan rumput juga dapat dilakukan.",
+    location: "Tanjungan, Kec. Borobudur",
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "gamelan/gamelan_1.webp",
+      "gamelan/gamelan_2.webp",
+      "gamelan/gamelan_3.webp",
+      "gamelan/gamelan_4.webp",
+      "gamelan/gamelan_5.webp",
+    ],
+    title: "Gamelan",
+    description:
+      "Pak Tijab selaku niyaga atau juga dalang akan mengajari temen2 traveller untuk mengenal warisan budaya gamelan & sekaligus mengajari basik dasar bermain gamelan serta jurus 1 menit bisa bermain gamelan",
+    location: "Giritengah, Kec. Borobudur",
+    price: 30_000,
+  },
+  {
+    category: DestinationCategory.Education,
+    image: [
+      "rik-rok/rikrok_1.webp",
+      "rik-rok/rikrok_2.webp",
+      "rik-rok/rikrok_3.webp",
+      "rik-rok/rikrok_4.webp",
+      "rik-rok/rikrok_5.webp",
+    ],
+    title: "Rik-Rok (Pensil Gaul)",
+    description:
+      "Rik-Rok merupakan sebuah galeri handycraft dengan bahan baku kayu. Rik-rok terkenal dengan produksi pensil kayunya yang sering disebut pensil gaul. Pengunjung dapat belajar membuat pensil gaul atau souvenir lainnya.",
+    location: "Wanurejo, Kec. Borobudur",
+    price: 15_000,
+  },
 ];
