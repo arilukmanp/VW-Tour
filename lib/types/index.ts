@@ -6,9 +6,9 @@ export enum TripCategory {
 }
 
 export enum DestinationCategory {
-  Tour,
-  Education,
-  Resto,
+  Tour = "Destinasi Wisata",
+  Education = "Wisata Edukasi",
+  Resto = "Restaurant",
 }
 
 export enum AdditionalItem {
