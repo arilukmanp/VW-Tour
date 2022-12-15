@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useScreenDetectIsMobile = () => {
+const useScreenMobile = () => {
   const [width, setWidth] = useState<number>(0);
 
   function handleWindowSizeChange() {
@@ -20,3 +20,5 @@ export const useScreenDetectIsMobile = () => {
 
   return isMobile;
 };
+
+export default useScreenMobile;
