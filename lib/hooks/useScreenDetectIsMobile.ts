@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 
 export const useScreenDetectIsMobile = () => {
-  const [width, setWidth] = useState<number>(window.innerWidth);
+  const [width, setWidth] = useState<number>(0);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
 
   useEffect(() => {
+    handleWindowSizeChange();
     window.addEventListener("resize", handleWindowSizeChange);
 
     return () => {
