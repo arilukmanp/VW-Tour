@@ -6,7 +6,7 @@ export interface TripInterface {
   title: string;
   description: string;
   duration: number;
-  destination: number;
+  totalDestination: number;
   price: number;
 }
 
@@ -19,7 +19,7 @@ export const tripData: TripInterface[] = [
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 2 pilihan destinasi wisata dengan durasi sekitar 2.5 jam.",
     duration: 2.5,
-    destination: 2,
+    totalDestination: 2,
     price: 350_000,
   },
   {
@@ -30,7 +30,7 @@ export const tripData: TripInterface[] = [
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 3 pilihan destinasi wisata dengan durasi sekitar 3.5 jam.",
     duration: 3.5,
-    destination: 3,
+    totalDestination: 3,
     price: 450_000,
   },
   {
@@ -41,7 +41,7 @@ export const tripData: TripInterface[] = [
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 4 pilihan destinasi wisata dengan durasi sekitar 5 jam.",
     duration: 5,
-    destination: 4,
+    totalDestination: 4,
     price: 700_000,
   },
   {
@@ -52,7 +52,7 @@ export const tripData: TripInterface[] = [
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 7 pilihan destinasi wisata dengan durasi sekitar 9 jam.",
     duration: 9,
-    destination: 7,
+    totalDestination: 7,
     price: 900_000,
   },
 ];
