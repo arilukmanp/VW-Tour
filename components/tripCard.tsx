@@ -12,11 +12,8 @@ interface TripCardInterface {
   setIsSelected: Dispatch<TripInterface>;
 }
 
-export default function TripCard({
-  data,
-  isSelected,
-  setIsSelected,
-}: TripCardInterface) {
+export default function TripCard(props: TripCardInterface) {
+  const { data, isSelected, setIsSelected } = props;
   const isMobile = useScreenMobile();
 
   return (
@@ -48,9 +45,8 @@ export default function TripCard({
         </div>
 
         <div
-          className={`p-4 pt-3 ${
-            !isSelected && "border rounded-t-none border-t-0 rounded-xl"
-          }`}
+          className={`p-4 pt-3
+          ${!isSelected && "border rounded-t-none border-t-0 rounded-xl"}`}
         >
           <h3 className="mb-2.5 text-xl font-semibold text-slate-800">
             {data.title}
