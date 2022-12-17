@@ -1,4 +1,5 @@
 import About from "components/about";
+import Faq from "components/faq";
 import Trip from "components/trip";
 import Footer from "layouts/footer";
 import Head from "next/head";
@@ -23,6 +24,7 @@ export default function Home() {
       <main>
         <About />
         <Trip />
+        <Faq />
         <Footer />
       </main>
     </>
