@@ -1,4 +1,5 @@
 import About from "components/about";
+import Trip from "components/trip";
 import Head from "next/head";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
 
       <main>
         <About />
+        <Trip />
       </main>
     </>
   );
