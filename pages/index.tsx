@@ -1,4 +1,5 @@
 import About from "components/about";
+import Contact from "components/contact";
 import Faq from "components/faq";
 import Trip from "components/trip";
 import Footer from "layouts/footer";
@@ -24,6 +25,7 @@ export default function Home() {
       <main>
         <About />
         <Trip />
+        <Contact />
         <Faq />
         <Footer />
       </main>
