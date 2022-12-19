@@ -1,3 +1,6 @@
+import FaqCard from "./faqCard";
+import { faqData } from "lib/models/faq";
+
 export default function Faq() {
   return (
     <section id="faq">
@@ -13,7 +16,9 @@ export default function Faq() {
           </div>
 
           <div className="mt-6 space-y-1 xl:mt-12">
-            {/* content */}
+            {faqData.map((faq, index) => (
+              <FaqCard key={index.toString()} data={faq} />
+            ))}
           </div>
         </div>
       </div>
