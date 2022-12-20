@@ -1,4 +1,5 @@
 import About from "components/about";
+import Additionals from "components/additionals";
 import Contact from "components/contact";
 import Faq from "components/faq";
 import Trip from "components/trip";
@@ -25,6 +26,7 @@ export default function Home() {
       <main>
         <About />
         <Trip />
+        <Additionals />
         <Contact />
         <Faq />
         <Footer />
