@@ -1,7 +1,9 @@
 import About from "components/about";
 import Additionals from "components/additionals";
 import Contact from "components/contact";
+import Destinations from "components/destinations";
 import Faq from "components/faq";
+import Hero from "components/hero";
 import Trip from "components/trip";
 import Footer from "layouts/footer";
 import Head from "next/head";
@@ -24,8 +26,10 @@ export default function Home() {
       </Head>
 
       <main>
+        <Hero />
         <About />
         <Trip />
+        <Destinations />
         <Additionals />
         <Contact />
         <Faq />
