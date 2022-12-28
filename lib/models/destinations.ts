@@ -2,7 +2,7 @@ import { DestinationCategory } from "lib/types";
 
 export interface DestinationInterface {
   category: DestinationCategory;
-  image: string[];
+  images: string[];
   title: string;
   description: string;
   location: string;
@@ -12,7 +12,7 @@ export interface DestinationInterface {
 export const destinationsData: DestinationInterface[] = [
   {
     category: DestinationCategory.Tour,
-    image: [
+    images: [
       "bukit-rhema/rhema_1.webp",
       "bukit-rhema/rhema_2.webp",
       "bukit-rhema/rhema_3.webp",
@@ -25,7 +25,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Tour,
-    image: [
+    images: [
       "punthuk-setumbu/punthuk_1.webp",
       "punthuk-setumbu/punthuk_2.webp",
       "punthuk-setumbu/punthuk_3.webp",
@@ -43,7 +43,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Tour,
-    image: [
+    images: [
       "junkyard/junkyard_1.webp",
       "junkyard/junkyard_2.webp",
       "junkyard/junkyard_3.webp",
@@ -56,7 +56,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Tour,
-    image: [
+    images: [
       "svarga-bumi/svarga_1.webp",
       "svarga-bumi/svarga_2.webp",
       "svarga-bumi/svarga_3.webp",
@@ -70,7 +70,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Resto,
-    image: [
+    images: [
       "enam-langit/enamlangit_1.webp",
       "enam-langit/enamlangit_2.webp",
       "enam-langit/enamlangit_3.webp",
@@ -83,7 +83,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Resto,
-    image: [
+    images: [
       "dagi/dagi_1.webp",
       "dagi/dagi_2.webp",
       "dagi/dagi_3.webp",
@@ -95,8 +95,8 @@ export const destinationsData: DestinationInterface[] = [
     location: "Taman Wisata Candi Borobudur",
   },
   {
-    category: DestinationCategory.Tour,
-    image: [
+    category: DestinationCategory.Education,
+    images: [
       "taman-kelinci/kelinci_1.webp",
       "taman-kelinci/kelinci_2.webp",
       "taman-kelinci/kelinci_3.webp",
@@ -110,7 +110,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "lebah-madu/madu_1.webp",
       "lebah-madu/madu_2.webp",
       "lebah-madu/madu_3.webp",
@@ -122,7 +122,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "kopi-luwak/luwak_1.webp",
       "kopi-luwak/luwak_2.webp",
       "kopi-luwak/luwak_3.webp",
@@ -138,7 +138,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "jamur/jamur_1.webp",
       "jamur/jamur_2.webp",
       "jamur/jamur_3.webp",
@@ -151,7 +151,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: ["batik/batik_1.webp", "batik/batik_2.webp", "batik/batik_3.webp"],
+    images: ["batik/batik_1.webp", "batik/batik_2.webp", "batik/batik_3.webp"],
     title: "Batik",
     description:
       "Tingal Art Borobudur merupakan tempat edukasi tentang produksi batik rumahan, pengunjungan juga dapat praktik membuat batik dan bisa dibawa pulang langsung.",
@@ -160,7 +160,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "gerabah/gerabah_1.webp",
       "gerabah/gerabah_2.webp",
       "gerabah/gerabah_3.webp",
@@ -173,7 +173,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "gula-jawa/gula_1.webp",
       "gula-jawa/gula_2.webp",
       "gula-jawa/gula_3.webp",
@@ -187,7 +187,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "rengginang/rengginang_1.webp",
       "rengginang/rengginang_2.webp",
       "rengginang/rengginang_3.webp",
@@ -203,7 +203,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "godhong/godhong_1.webp",
       "godhong/godhong_2.webp",
       "godhong/godhong_3.webp",
@@ -218,7 +218,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "kambing-etawa/kambing_1.webp",
       "kambing-etawa/kambing_2.webp",
       "kambing-etawa/kambing_3.webp",
@@ -230,7 +230,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "gamelan/gamelan_1.webp",
       "gamelan/gamelan_2.webp",
       "gamelan/gamelan_3.webp",
@@ -245,7 +245,7 @@ export const destinationsData: DestinationInterface[] = [
   },
   {
     category: DestinationCategory.Education,
-    image: [
+    images: [
       "rik-rok/rikrok_1.webp",
       "rik-rok/rikrok_2.webp",
       "rik-rok/rikrok_3.webp",
