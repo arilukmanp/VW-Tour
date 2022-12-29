@@ -2,6 +2,7 @@ import About from "components/about";
 import Additionals from "components/additionals";
 import Contact from "components/contact";
 import Destinations from "components/destinations";
+import Fab from "components/fab";
 import Faq from "components/faq";
 import Hero from "components/hero";
 import Trip from "components/trip";
@@ -34,6 +35,7 @@ export default function Home() {
         <Contact />
         <Faq />
         <Footer />
+        <Fab />
       </main>
     </>
   );
