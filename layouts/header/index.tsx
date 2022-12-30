@@ -106,7 +106,7 @@ export default function Header() {
                 return (
                   <>
                     <Popover.Button
-                      className="relative z-[1] inline-flex items-center rounded-lg p-2 bg-white bg-opacity-80 backdrop-blur shadow-md border-[0.5px] border-slate-100 focus:outline-none"
+                      className="relative z-[3] inline-flex items-center rounded-lg p-2 bg-white bg-opacity-80 backdrop-blur shadow-md border-[0.5px] border-slate-100 focus:outline-none"
                       aria-label="Toggle site navigation"
                     >
                       {({ open }) =>
@@ -130,7 +130,7 @@ export default function Header() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
-                            className="fixed inset-0 z-0 bg-slate-800/60 backdrop-blur"
+                            className="fixed inset-0 z-[2] bg-slate-800/60 backdrop-blur"
                           />
                           <Popover.Panel
                             static
@@ -142,7 +142,7 @@ export default function Header() {
                               y: -32,
                               transition: { duration: 0.2 },
                             }}
-                            className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-white px-6 pb-6 pt-28 shadow-sm shadow-gray-900/20"
+                            className="absolute inset-x-0 top-0 z-[2] origin-top rounded-b-2xl bg-white px-6 pb-6 pt-28 shadow-sm shadow-gray-900/20"
                           >
                             {({ close }) => (
                               <div className="space-y-4 flex flex-col gap-8 items-center mb-8">

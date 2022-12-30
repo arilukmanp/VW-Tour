@@ -28,7 +28,7 @@ export default function Fab() {
     <>
       <div
         onClick={toogle}
-        className="bottom-safe right-0 fixed mx-4 z-50 cursor-pointer"
+        className="bottom-safe right-0 fixed mx-4 z-[1] cursor-pointer"
       >
         <div
           className={`relative rounded-full flex shadow-lg bg-orangeSoft min-h-[4rem] min-w-[4rem] items-center justify-center transition-opacity duration-300 ease-out
