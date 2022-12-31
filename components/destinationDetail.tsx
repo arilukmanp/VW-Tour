@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { Dispatch, Fragment, useEffect, useState } from "react";
 import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
@@ -121,25 +123,17 @@ function Content(props: ContentInterface) {
             <div className="flex mt-3 items-center pb-5 order-first lg:order-none ">
               <div className="relative flex py-3 overflow-x-auto">
                 {data.images.map((image, index) => (
-                  <div
-                    onClick={() => setSelectedIdxImage(index)}
+                  <img
                     key={index.toString()}
-                    className={`relative w-16 mx-1 aspect-square cursor-pointer rounded bg-slate-100 ${
+                    onClick={() => setSelectedIdxImage(index)}
+                    src={`/images/destinations/${image}`}
+                    alt={`Foto ${data.title}`}
+                    className={`w-16 mx-1 aspect-square cursor-pointer rounded-lg bg-slate-100 object-cover object-center ${
                       selectedIdxImage == index
                         ? "border-2 border-orangeSoft"
                         : "p-[2px]"
                     }`}
-                  >
-                    <Image
-                      src={`/images/destinations/${image}`}
-                      alt={`Foto ${data.title}`}
-                      layout={"fill"}
-                      quality={20}
-                      className={`object-cover object-center ${
-                        selectedIdxImage == index ? "rounded-sm" : "rounded"
-                      }`}
-                    />
-                  </div>
+                  />
                 ))}
               </div>
             </div>
