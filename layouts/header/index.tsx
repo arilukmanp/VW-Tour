@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Popover } from "@headlessui/react";
 import { AnimatePresence, motion } from "framer-motion";
-import { HiOutlineMenuAlt3, HiOutlineX } from "react-icons/hi";
+import {
+  HiOutlineMenuAlt3,
+  HiOutlineX,
+  HiOutlineArrowLeft,
+} from "react-icons/hi";
 import { RiWhatsappFill, RiInstagramFill } from "react-icons/ri";
 import useScreenMobile from "lib/hooks/useScreenMobile";
 
@@ -36,6 +41,31 @@ function ListMenuMobile({ onClose }: { onClose: any }) {
   ));
 
   return <>{list}</>;
+}
+
+function Logo({ isMobile }: { isMobile: boolean }) {
+  const router = useRouter();
+
+  if (isMobile && router.pathname.includes("destinations")) {
+    return (
+      <div
+        onClick={() => router.back()}
+        className="cursor-pointer inline-flex items-center rounded-lg p-2 bg-white bg-opacity-80 backdrop-blur shadow-md border-[0.5px] border-slate-100 focus:outline-none"
+      >
+        <HiOutlineArrowLeft size={23} className="text-slate-600" />
+      </div>
+    );
+  }
+
+  return (
+    <Image
+      src="/logo.png"
+      alt="Logo"
+      height={30}
+      width={150}
+      className="cursor-pointer object-contain"
+    />
+  );
 }
 
 export default function Header() {
@@ -75,13 +105,7 @@ export default function Header() {
           </div>
 
           <div className="relative flex w-full justify-between gap-16">
-            <Image
-              src="/logo.png"
-              alt="Logo"
-              height={30}
-              width={150}
-              className="cursor-pointer object-contain"
-            />
+            <Logo isMobile={isMobile} />
 
             <div className="hidden md:flex p-2">
               <div className="flex md:gap-6 text-sm">
