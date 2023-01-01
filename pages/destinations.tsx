@@ -1,8 +1,9 @@
 import Head from "next/head";
-import { DestinationCard, Fab } from "components";
 import { destinationsData } from "lib/models/destinations";
 import Footer from "layouts/footer";
 import Header from "layouts/header";
+import DestinationCard from "components/destinationCard";
+import Fab from "components/fab";
 
 export default function Destinations() {
   return (
