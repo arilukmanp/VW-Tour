@@ -13,8 +13,7 @@ export interface TripInterface {
 export const tripData: TripInterface[] = [
   {
     category: TripCategory.Short,
-    image:
-      "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+    image: "short.webp",
     title: "Short Trip",
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 2 pilihan destinasi wisata dengan durasi sekitar 2.5 jam.",
@@ -24,8 +23,7 @@ export const tripData: TripInterface[] = [
   },
   {
     category: TripCategory.Medium,
-    image:
-      "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+    image: "medium.webp",
     title: "Medium Trip",
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 3 pilihan destinasi wisata dengan durasi sekitar 3.5 jam.",
@@ -35,8 +33,7 @@ export const tripData: TripInterface[] = [
   },
   {
     category: TripCategory.Long,
-    image:
-      "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+    image: "long.webp",
     title: "Long Trip",
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 4 pilihan destinasi wisata dengan durasi sekitar 5 jam.",
@@ -46,8 +43,7 @@ export const tripData: TripInterface[] = [
   },
   {
     category: TripCategory.OneDay,
-    image:
-      "https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500",
+    image: "one-day.webp",
     title: "One Day",
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 7 pilihan destinasi wisata dengan durasi sekitar 9 jam.",
