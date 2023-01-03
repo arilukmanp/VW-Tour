@@ -28,7 +28,7 @@ export default function TripCard(props: TripCardInterface) {
         <div className="relative">
           <div className="w-full h-64 xl:h-auto xl:aspect-[4/2.5]">
             <Image
-              src={`${data.image}`}
+              src={`/images/trip/${data.image}`}
               alt={`Foto ${data.title}`}
               layout={"fill"}
               quality={50}
