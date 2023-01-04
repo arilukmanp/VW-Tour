@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="home">
       <div className="w-full m-auto">
-        <div className="bg-[url('https://images.pexels.com/photos/2408666/pexels-photo-2408666.jpeg')] bg-cover bg-center min-h-screen">
+        <div className="bg-[url('/images/bg_hero.jpg')] bg-cover bg-center min-h-screen">
           <Header />
 
           <div className="px-4 pt-[50%] md:pt-[25%] xl:pt-[20%] 2xl:pt-60 justify-center mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
