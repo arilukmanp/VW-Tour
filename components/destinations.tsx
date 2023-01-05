@@ -146,7 +146,7 @@ function DestinationThumbnail(props: dataThumbnailInterface) {
   return (
     <div className={`cursor-pointer ${isBigThumbnail ? "relative" : ""}`}>
       <div
-        className={`w-full lg:aspect-[4/3] aspect-video 
+        className={`relative w-full lg:aspect-[4/3] aspect-video 
         ${isBigThumbnail && "sm:block"}`}
       >
         <Image
