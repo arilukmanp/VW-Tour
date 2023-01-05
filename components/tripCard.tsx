@@ -26,7 +26,7 @@ export default function TripCard(props: TripCardInterface) {
           ${isSelected && "border-2 border-cyan-500"}`}
       >
         <div className="relative">
-          <div className="w-full h-64 xl:h-auto xl:aspect-[4/2.5]">
+          <div className="relative w-full h-64 xl:h-auto xl:aspect-[4/2.5]">
             <Image
               src={`/images/trip/${data.image}`}
               alt={`Foto ${data.title}`}
