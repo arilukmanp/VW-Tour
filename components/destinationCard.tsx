@@ -14,7 +14,7 @@ export default function DestinationCard(props: { data: DestinationInterface }) {
         className="p-2 lg:w-1/3 md:w-1/2 w-full cursor-pointer"
       >
         <div className="relative">
-          <div className="w-full aspect-video">
+          <div className="relative w-full aspect-video">
             <Image
               src={`/images/destinations/${data.images[0]}`}
               alt={`Foto ÷${data.title}`}
