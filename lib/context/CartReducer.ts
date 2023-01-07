@@ -17,14 +17,18 @@ type CartType = {
 
 type ActionType =
   | { type: "SET_PEOPLE"; people: number }
-  | { type: "SET_TRIP"; trip: TripInterface };
+  | { type: "SET_TRIP"; trip: TripInterface }
+  | { type: "ADD_DESTINATION"; destination: DestinationInterface }
+  | { type: "REMOVE_DESTINATION"; destination: DestinationInterface };
 
-type CartReducerType = {
+type ReducerType = {
   people: number | null;
   setPeople: (people: number) => void;
   trip: TripInterface;
   setTrip: (trip: TripInterface) => void;
   destinations: DestinationInterface[];
+  addDestination: (destination: DestinationInterface) => void;
+  removeDestination: (destination: DestinationInterface) => void;
   additionals: AdditionalCartInterface[];
 };
 
@@ -35,7 +39,7 @@ const initialCartData: CartType = {
   additionals: [] as AdditionalCartInterface[],
 };
 
-export default function useCartReducer(): CartReducerType {
+export default function useCartReducer(): ReducerType {
   const reducer = (state: CartType, action: ActionType) => {
     switch (action.type) {
       case "SET_PEOPLE":
@@ -43,6 +47,19 @@ export default function useCartReducer(): CartReducerType {
 
       case "SET_TRIP":
         return { ...state, trip: action.trip };
+
+      case "ADD_DESTINATION":
+        return {
+          ...state,
+          destinations: [...state.destinations, action.destination],
+        };
+
+      case "REMOVE_DESTINATION":
+        let index = state.destinations.indexOf(action.destination);
+        return {
+          ...state,
+          destinations: [...state.destinations.splice(index, 1)],
+        };
     }
   };
 
@@ -59,5 +76,22 @@ export default function useCartReducer(): CartReducerType {
     dispatch({ type: "SET_TRIP", trip: trip });
   }, []);
 
-  return { people, setPeople, trip, setTrip, destinations, additionals };
+  const addDestination = useCallback((destination: DestinationInterface) => {
+    dispatch({ type: "ADD_DESTINATION", destination: destination });
+  }, []);
+
+  const removeDestination = useCallback((destination: DestinationInterface) => {
+    dispatch({ type: "REMOVE_DESTINATION", destination: destination });
+  }, []);
+
+  return {
+    people,
+    setPeople,
+    trip,
+    setTrip,
+    destinations,
+    addDestination,
+    removeDestination,
+    additionals,
+  };
 }

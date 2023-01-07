@@ -7,9 +7,7 @@ interface PropsInterface {
 }
 
 export default function CartProvider({ children }: PropsInterface) {
-  return (
-    <CartContext.Provider value={useCartReducer()}>
-      {children}
-    </CartContext.Provider>
-  );
+  const value = useCartReducer();
+
+  return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
