@@ -1,10 +1,7 @@
-import { useState } from "react";
-import { tripData, TripInterface } from "lib/models/trip";
+import { tripData } from "lib/models/trip";
 import TripCard from "./tripCard";
 
 export default function Trip() {
-  const [isSelected, setIsSelected] = useState<TripInterface>();
-
   return (
     <section id="trip" className="bg-whiteBone">
       <div className="text-gray-600 overflow-hidden">
@@ -19,18 +16,9 @@ export default function Trip() {
           </div>
 
           <div className="flex flex-wrap -m-4">
-            {tripData.map((trip, index) => {
-              let isTripSelected = isSelected?.category == trip.category;
-
-              return (
-                <TripCard
-                  key={index.toString()}
-                  data={trip}
-                  isSelected={isTripSelected}
-                  setIsSelected={setIsSelected}
-                />
-              );
-            })}
+            {tripData.map((trip, index) => (
+              <TripCard key={index.toString()} data={trip} />
+            ))}
           </div>
         </div>
       </div>
