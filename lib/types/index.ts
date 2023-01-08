@@ -1,7 +1,7 @@
 export enum TripCategory {
-  Short = "Short",
-  Medium = "Medium",
-  Long = "Long",
+  Short = "Short Trip",
+  Medium = "Medium Trip",
+  Long = "Long Trip",
   OneDay = "One Day",
 }
 
