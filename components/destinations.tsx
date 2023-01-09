@@ -1,9 +1,12 @@
+import Image from "next/image";
+import Link from "next/link";
 import {
   destinationsData,
   DestinationInterface,
 } from "lib/models/destinations";
-import Image from "next/image";
-import Link from "next/link";
+import { HiBadgeCheck } from "react-icons/hi";
+import { useCartContext } from "lib/context/CartStore";
+import { useDestinationContext } from "lib/context/destinations/destinationsStore";
 
 export default function Destinations() {
   const destinationToShow = [
@@ -140,14 +143,25 @@ interface dataThumbnailInterface {
 }
 
 function DestinationThumbnail(props: dataThumbnailInterface) {
-  const { data, imgIndex } = props;
-  const isBigThumbnail = props.viewMode == ThumbnailView.Big;
+  const { data, imgIndex, viewMode } = props;
+  const { showDetail } = useDestinationContext();
+  const { destinations } = useCartContext();
+
+  const isBigThumbnail = viewMode == ThumbnailView.Big;
+  const isSelected = destinations.find(
+    (destination) => destination.title == data.title
+  );
 
   return (
-    <div className={`cursor-pointer ${isBigThumbnail ? "relative" : ""}`}>
+    <div
+      onClick={() => showDetail(data)}
+      className={`relative cursor-pointer ${isBigThumbnail ? "relative" : ""} ${
+        isSelected && "border-2 border-cyan-500 rounded-[10px]"
+      }`}
+    >
       <div
         className={`relative w-full lg:aspect-[4/3] aspect-video 
-        ${isBigThumbnail && "sm:block"}`}
+        ${isBigThumbnail && "sm:block"} `}
       >
         <Image
           src={`/images/destinations/${data.images[imgIndex]}`}
@@ -157,13 +171,24 @@ function DestinationThumbnail(props: dataThumbnailInterface) {
           className={"rounded-lg object-cover"}
         />
       </div>
+
       <div
         className={`absolute bottom-0 w-full h-1/3 rounded-b-lg bg-gradient-to-t from-slate-900/50 to-slate-800/0 
         ${isBigThumbnail && "sm:h-1/5"}`}
       />
+
       <div className="absolute bottom-0 left-0 px-4 py-2.5">
         <h2 className="text-md font-semibold text-white">{data.title}</h2>
       </div>
+
+      {isSelected && (
+        <div className="absolute top-0 bottom-0 left-0 right-0 bg-cyan-100 bg-opacity-20 flex items-center justify-center">
+          <div className="relative rounded-full flex items-center justify-center">
+            <div className="absolute bg-white p-6 rounded-full z-0" />
+            <HiBadgeCheck size={100} className="text-cyan-500 z-0" />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
