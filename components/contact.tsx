@@ -5,7 +5,7 @@ export default function Contact() {
 
   const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP;
   const message =
-    "Halo%20admin,%0AAku%20mau%20tanya%20mengenai%20trip%20di%20VW%20Tour%20Borobudur";
+    "Halo%20admin,%0AAku%20mau%20tanya%20mengenai%20trip%20di%20VW%20Wisata%20Borobudur";
 
   const whatsappMobileLink = `https://wa.me/${whatsapp}&text=${message}`;
   const whatsappWebLink = `https://web.whatsapp.com/send?phone=${whatsapp}&text=${message}&type=phone_number&app_absent=0`;

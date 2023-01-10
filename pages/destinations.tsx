@@ -59,7 +59,7 @@ export default function Destinations() {
                 Mau destinasi edukasi atau wisata ikonik, semuanya ada!
               </p>
               <p className="mx-auto leading-relaxed text-base text-gray-500">
-                Belasan tujuan destinasi populer dapat anda pilih di VW Tour
+                Belasan tujuan destinasi populer dapat anda pilih di VW Wisata
                 Borobudur
               </p>
             </div>
