@@ -1,29 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AdditionalInterface } from "lib/models/additionals";
 import { KFormatter } from "lib/utils/currencyFormatter";
+import { useCartContext } from "lib/context/CartStore";
 
 interface AdditionalCardInterface {
   data: AdditionalInterface;
 }
 
-export default function AdditionalCard(props: AdditionalCardInterface) {
-  const { data } = props;
+export default function AdditionalCard({ data }: AdditionalCardInterface) {
+  const { additionals, addAdditional, removeAdditional } = useCartContext();
   const [isSelected, setIsSelected] = useState(false);
 
-  function getBenefits() {
-    return data.receive.map((item, index) => (
-      <div
-        key={index.toString()}
-        className="px-2 py-0.5 sm:py-1 text-xs text-cyan-500 bg-slate-100 bg-opacity-90 rounded-sm sm:rounded-md"
-      >
-        {item}
-      </div>
-    ));
+  useEffect(() => {
+    let isFoundAdditional = Boolean(
+      additionals.find((additional) => additional?.data?.item == data.item)
+    );
+    setIsSelected(isFoundAdditional);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [additionals]);
+
+  function onSelect() {
+    if (isSelected) {
+      removeAdditional(data);
+    } else {
+      addAdditional(data);
+    }
   }
 
   return (
     <div
-      onClick={() => setIsSelected(!isSelected)}
+      onClick={onSelect}
       className={`flex max-w-2xl mx-auto items-center justify-between cursor-pointer rounded-xl ${
         isSelected
           ? "border-2 md:px-[calc(theme(spacing.8)-1px)] p-[calc(theme(spacing.4)-1px)] border-cyan-500 bg-cyan-50 bg-opacity-20"
@@ -40,7 +46,9 @@ export default function AdditionalCard(props: AdditionalCardInterface) {
               <span className="text-[10px] font-normal text-lime-500">{`(${data.device})`}</span>
             )}
           </h2>
-          <div className="flex flex-row space-x-1">{getBenefits()}</div>
+          <div className="flex flex-row space-x-1">
+            <Benefits data={data.receive} />
+          </div>
         </div>
       </div>
 
@@ -57,11 +65,22 @@ export default function AdditionalCard(props: AdditionalCardInterface) {
   );
 }
 
-interface ChecklistInterface {
-  isSelected: boolean;
+function Benefits({ data }: { data: string[] }) {
+  return (
+    <>
+      {data.map((item, index) => (
+        <div
+          key={index.toString()}
+          className="px-2 py-0.5 sm:py-1 text-xs text-cyan-500 bg-slate-100 bg-opacity-90 rounded-sm sm:rounded-md"
+        >
+          {item}
+        </div>
+      ))}
+    </>
+  );
 }
 
-function ChecklistIcon({ isSelected }: ChecklistInterface) {
+function ChecklistIcon({ isSelected }: { isSelected: boolean }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
