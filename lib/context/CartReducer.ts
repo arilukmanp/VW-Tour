@@ -3,7 +3,7 @@ import { TripInterface } from "lib/models/trip";
 import { AdditionalInterface } from "lib/models/additionals";
 import { DestinationInterface } from "lib/models/destinations";
 
-interface AdditionalCartInterface {
+export interface AdditionalCartInterface {
   data: AdditionalInterface;
   amount: number;
 }
@@ -19,7 +19,11 @@ type ActionType =
   | { type: "SET_PEOPLE"; people: number }
   | { type: "SET_TRIP"; trip: TripInterface }
   | { type: "ADD_DESTINATION"; destination: DestinationInterface }
-  | { type: "REMOVE_DESTINATION"; destination: DestinationInterface };
+  | { type: "REMOVE_DESTINATION"; destination: DestinationInterface }
+  | { type: "ADD_ADDITIONAL"; additional: AdditionalInterface }
+  | { type: "REMOVE_ADDITIONAL"; additional: AdditionalInterface }
+  | { type: "INCREASE_ADDITIONAL"; additional: AdditionalInterface }
+  | { type: "DECREASE_ADDITIONAL"; additional: AdditionalInterface };
 
 type ReducerType = {
   people: number | null;
@@ -30,6 +34,10 @@ type ReducerType = {
   addDestination: (destination: DestinationInterface) => void;
   removeDestination: (destination: DestinationInterface) => void;
   additionals: AdditionalCartInterface[];
+  addAdditional: (additional: AdditionalInterface) => void;
+  removeAdditional: (additional: AdditionalInterface) => void;
+  increaseAdditional: (additional: AdditionalInterface) => void;
+  decreaseAdditional: (additional: AdditionalInterface) => void;
 };
 
 const initialCartData: CartType = {
@@ -55,11 +63,57 @@ export default function useCartReducer(): ReducerType {
         };
 
       case "REMOVE_DESTINATION":
-        let index = state.destinations.indexOf(action.destination);
+        let indexDestination = state.destinations.indexOf(action.destination);
         return {
           ...state,
-          destinations: [...state.destinations.splice(index, 1)],
+          destinations: [...state.destinations.splice(indexDestination, 1)],
         };
+
+      case "ADD_ADDITIONAL":
+        return {
+          ...state,
+          additionals: [
+            ...state.additionals,
+            { data: action.additional, amount: 1 },
+          ],
+        };
+
+      case "REMOVE_ADDITIONAL":
+        const deletedAdditionals: AdditionalCartInterface[] =
+          state.additionals.map((additional, index) => {
+            if (additional.data.item == action.additional.item) {
+              state.additionals.splice(index, 1);
+            }
+            return additional;
+          });
+
+        return { ...state, additionals: deletedAdditionals };
+
+      case "INCREASE_ADDITIONAL":
+        const increasedAdditionals: AdditionalCartInterface[] =
+          state.additionals.map((additional) => {
+            if (additional.data.item == action.additional.item) {
+              return { ...additional, amount: additional.amount++ };
+            }
+            return additional;
+          });
+
+        return { ...state, additionals: increasedAdditionals };
+
+      case "DECREASE_ADDITIONAL":
+        const decreasedAdditionals: AdditionalCartInterface[] =
+          state.additionals.map((additional, index) => {
+            if (additional.data.item == action.additional.item) {
+              if (additional.amount <= 1) {
+                state.additionals.splice(index, 1);
+              } else {
+                return { ...additional, amount: additional.amount-- };
+              }
+            }
+            return additional;
+          });
+
+        return { ...state, additionals: decreasedAdditionals };
     }
   };
 
@@ -84,6 +138,22 @@ export default function useCartReducer(): ReducerType {
     dispatch({ type: "REMOVE_DESTINATION", destination: destination });
   }, []);
 
+  const addAdditional = useCallback((additional: AdditionalInterface) => {
+    dispatch({ type: "ADD_ADDITIONAL", additional: additional });
+  }, []);
+
+  const removeAdditional = useCallback((additional: AdditionalInterface) => {
+    dispatch({ type: "REMOVE_ADDITIONAL", additional: additional });
+  }, []);
+
+  const increaseAdditional = useCallback((additional: AdditionalInterface) => {
+    dispatch({ type: "INCREASE_ADDITIONAL", additional: additional });
+  }, []);
+
+  const decreaseAdditional = useCallback((additional: AdditionalInterface) => {
+    dispatch({ type: "DECREASE_ADDITIONAL", additional: additional });
+  }, []);
+
   return {
     people,
     setPeople,
@@ -93,5 +163,9 @@ export default function useCartReducer(): ReducerType {
     addDestination,
     removeDestination,
     additionals,
+    addAdditional,
+    removeAdditional,
+    increaseAdditional,
+    decreaseAdditional,
   };
 }
