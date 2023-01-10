@@ -223,11 +223,9 @@ function Content(props: ContentInterface) {
         </div>
       </div>
 
-      <Alert
-        message={alertMessage}
-        isShowed={isAlertShowed}
-        setIsShowed={setIsAlertShowed}
-      />
+      <Alert isShowed={isAlertShowed} setIsShowed={setIsAlertShowed}>
+        {alertMessage}
+      </Alert>
     </>
   );
 }

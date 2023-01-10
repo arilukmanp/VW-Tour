@@ -1,18 +1,18 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IoAlertOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
 interface AlertInterface {
-  message: JSX.Element;
   isShowed: boolean;
   setIsShowed: Dispatch<SetStateAction<boolean>>;
+  children: ReactNode;
 }
 
 export default function Alert(props: AlertInterface) {
-  const { message, isShowed, setIsShowed } = props;
+  const { isShowed, setIsShowed, children } = props;
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -42,7 +42,7 @@ export default function Alert(props: AlertInterface) {
   return (
     <motion.div
       role="alert"
-      className="fixed -top-10 left-0 right-0"
+      className="fixed z-20 -top-10 left-0 right-0"
       initial="unmount"
       exit="unmount"
       animate={isShowed ? "mount" : "unmount"}
@@ -58,7 +58,7 @@ export default function Alert(props: AlertInterface) {
           </span>
 
           <span className="mr-4 text-left underline-offset-4 flex-auto text-sm">
-            {message}
+            {children}
           </span>
 
           <div role="button" onClick={() => setIsShowed(false)} className="p-1">
