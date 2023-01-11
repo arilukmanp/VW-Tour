@@ -5,7 +5,7 @@ import {
   DestinationInterface,
 } from "lib/models/destinations";
 import { HiBadgeCheck } from "react-icons/hi";
-import { useCartContext } from "lib/context/CartStore";
+import { useCartContext } from "lib/context/cart/CartStore";
 import { useDestinationContext } from "lib/context/destinations/destinationsStore";
 
 export default function Destinations() {

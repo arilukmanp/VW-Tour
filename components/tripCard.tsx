@@ -3,7 +3,7 @@ import useScreenMobile from "lib/hooks/useScreenMobile";
 import { FiClock, FiMapPin } from "react-icons/fi";
 import { HiBadgeCheck } from "react-icons/hi";
 import { TripInterface } from "lib/models/trip";
-import { useCartContext } from "lib/context/CartStore";
+import { useCartContext } from "lib/context/cart/CartStore";
 import { KFormatter } from "lib/utils/currencyFormatter";
 
 interface TripCardInterface {
