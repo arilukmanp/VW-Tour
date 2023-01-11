@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import useScreenMobile from "lib/hooks/useScreenMobile";
-import { useCartContext } from "lib/context/CartStore";
+import { useCartContext } from "lib/context/cart/CartStore";
 import { useDestinationContext } from "lib/context/destinations/destinationsStore";
 import { DestinationInterface } from "lib/models/destinations";
 import { DestinationCategory } from "lib/types";

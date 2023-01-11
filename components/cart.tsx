@@ -4,8 +4,8 @@ import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 import { AdditionalItem, DestinationCategory } from "lib/types";
 import { DestinationInterface } from "lib/models/destinations";
 import useScreenMobile from "lib/hooks/useScreenMobile";
-import { useCartContext } from "lib/context/CartStore";
-import { AdditionalCartInterface } from "lib/context/CartReducer";
+import { useCartContext } from "lib/context/cart/CartStore";
+import { AdditionalCartInterface } from "lib/context/cart/CartReducer";
 import { currencyFormatter } from "lib/utils/currencyFormatter";
 import Alert from "./alert";
 

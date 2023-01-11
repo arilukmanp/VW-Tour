@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { AdditionalInterface } from "lib/models/additionals";
 import { KFormatter } from "lib/utils/currencyFormatter";
-import { useCartContext } from "lib/context/CartStore";
+import { useCartContext } from "lib/context/cart/CartStore";
 
 interface AdditionalCardInterface {
   data: AdditionalInterface;
