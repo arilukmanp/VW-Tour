@@ -7,7 +7,7 @@ import useScreenMobile from "lib/hooks/useScreenMobile";
 import { useCartContext } from "lib/context/cart/CartStore";
 import { AdditionalCartInterface } from "lib/context/cart/CartReducer";
 import { currencyFormatter } from "lib/utils/currencyFormatter";
-import Alert from "./alert";
+import Alert from "../alert";
 
 interface CartInterface {
   isShow: boolean;
