@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { BiCartAlt } from "react-icons/bi";
 import { useCartContext } from "lib/context/cart/CartStore";
-import Cart from "./cart";
+import Cart from "../cart";
 
 export default function Fab() {
   const { trip, destinations, additionals } = useCartContext();
