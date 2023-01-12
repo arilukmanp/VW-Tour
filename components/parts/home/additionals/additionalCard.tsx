@@ -16,6 +16,7 @@ export default function AdditionalCard({ data }: AdditionalCardInterface) {
       additionals.find((additional) => additional?.data?.item == data.item)
     );
     setIsSelected(isFoundAdditional);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [additionals]);
 
@@ -65,21 +66,6 @@ export default function AdditionalCard({ data }: AdditionalCardInterface) {
   );
 }
 
-function Benefits({ data }: { data: string[] }) {
-  return (
-    <>
-      {data.map((item, index) => (
-        <div
-          key={index.toString()}
-          className="px-2 py-0.5 sm:py-1 text-xs text-cyan-500 bg-slate-100 bg-opacity-90 rounded-sm sm:rounded-md"
-        >
-          {item}
-        </div>
-      ))}
-    </>
-  );
-}
-
 function ChecklistIcon({ isSelected }: { isSelected: boolean }) {
   return (
     <svg
@@ -95,5 +81,20 @@ function ChecklistIcon({ isSelected }: { isSelected: boolean }) {
         clipRule="evenodd"
       />
     </svg>
+  );
+}
+
+function Benefits({ data }: { data: string[] }) {
+  return (
+    <>
+      {data.map((item, index) => (
+        <div
+          key={index.toString()}
+          className="px-2 py-0.5 sm:py-1 text-xs text-cyan-500 bg-slate-100 bg-opacity-90 rounded-sm sm:rounded-md"
+        >
+          {item}
+        </div>
+      ))}
+    </>
   );
 }
