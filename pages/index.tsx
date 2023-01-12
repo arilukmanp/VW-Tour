@@ -5,7 +5,7 @@ import Destinations from "components/destinations";
 import Fab from "components/fab";
 import Faq from "components/faq";
 import Hero from "components/hero";
-import Trip from "components/trip";
+import Trip from "components/parts/home/trips";
 import Footer from "layouts/footer";
 import Head from "next/head";
 
