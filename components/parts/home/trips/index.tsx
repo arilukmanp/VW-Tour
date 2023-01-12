@@ -15,7 +15,7 @@ export default function Trip() {
             </p>
           </div>
 
-          <div className="flex flex-wrap -m-4">
+          <div className="flex flex-wrap -m-4 place-content-center">
             {tripData.map((trip, index) => (
               <TripCard key={index.toString()} data={trip} />
             ))}
