@@ -1,6 +1,6 @@
 import About from "components/parts/home/about";
 import Additionals from "components/parts/home/additionals";
-import Contact from "components/contact";
+import Contact from "components/parts/home/contact";
 import Destinations from "components/parts/home/destinations";
 import Fab from "components/fab";
 import Faq from "components/faq";
