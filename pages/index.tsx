@@ -4,7 +4,7 @@ import Contact from "components/parts/home/contact";
 import Destinations from "components/parts/home/destinations";
 import Fab from "components/fab";
 import Faq from "components/parts/home/faq";
-import Hero from "components/hero";
+import Hero from "components/parts/home/hero";
 import Trip from "components/parts/home/trips";
 import Footer from "layouts/footer";
 import Head from "next/head";
