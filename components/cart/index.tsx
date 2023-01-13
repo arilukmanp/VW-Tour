@@ -3,6 +3,7 @@ import { BottomSheet } from "react-spring-bottom-sheet";
 import { FaMinusCircle, FaPlusCircle } from "react-icons/fa";
 import { AdditionalItem, DestinationCategory } from "lib/types";
 import { DestinationInterface } from "lib/models/destinations";
+import useWhatsapp from "lib/hooks/useWhatsapp";
 import useScreenMobile from "lib/hooks/useScreenMobile";
 import { useCartContext } from "lib/context/cart/CartStore";
 import { AdditionalCartInterface } from "lib/context/cart/CartReducer";
@@ -16,12 +17,19 @@ interface CartInterface {
 
 export default function Cart({ isShow, onDismiss }: CartInterface) {
   const isMobile = useScreenMobile();
+  const sendToWhatsapp = useWhatsapp();
   const { people, trip, destinations, additionals } = useCartContext();
   const [estimatedCar, setEstimatedCar] = useState(1);
   const [selectedDestinations, setSelectedDestinations] = useState("");
   const [selectedAdditionals, setSelectedAdditionals] = useState("");
   const [total, setTotal] = useState(0);
   const [isAlertShow, setIsAlertShow] = useState(false);
+
+  const waMessage = `Halo%20admin,%0ASaya%20mau%20booking%20trip%20dengan%20detail:%0A%0APaket%20Wisata:%20${
+    trip.title
+  }%0AJumlah%20Orang:%20${people}%0AJumlah%20Unit:%20${estimatedCar}%0ADestinasi:%20${selectedDestinations}%0ATambahan:%20${selectedAdditionals}%0AEstimasi%20Total:%20Rp%20${currencyFormatter(
+    total
+  )}`;
 
   useEffect(() => {
     const tourist: number = people ?? 1;
@@ -55,26 +63,12 @@ export default function Cart({ isShow, onDismiss }: CartInterface) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [people, trip, additionals]);
 
-  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP;
-  const message = `Halo%20admin,%0ASaya%20mau%20booking%20trip%20dengan%20detail:%0A%0APaket%20Wisata:%20${
-    trip.title
-  }%0AJumlah%20Orang:%20${people}%0AJumlah%20Unit:%20${estimatedCar}%0ADestinasi:%20${selectedDestinations}%0ATambahan:%20${selectedAdditionals}%0AEstimasi%20Total:%20Rp%20${currencyFormatter(
-    total
-  )}`;
-
-  const whatsappMobileLink = `https://wa.me/${whatsapp}&text=${message}`;
-  const whatsappWebLink = `https://web.whatsapp.com/send?phone=${whatsapp}&text=${message}&type=phone_number&app_absent=0`;
-
   function onNext() {
     if (!people) {
       return undefined;
     }
 
-    if (isMobile) {
-      return whatsappMobileLink;
-    } else {
-      return whatsappWebLink;
-    }
+    return sendToWhatsapp({ isMobile: isMobile, message: waMessage });
   }
 
   return (

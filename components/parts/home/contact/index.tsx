@@ -1,14 +1,12 @@
 import useScreenMobile from "lib/hooks/useScreenMobile";
+import useWhatsapp from "lib/hooks/useWhatsapp";
 
 export default function Contact() {
   const isMobile = useScreenMobile();
+  const sendToWhatsapp = useWhatsapp();
 
-  const whatsapp = process.env.NEXT_PUBLIC_WHATSAPP;
   const message =
     "Halo%20admin,%0AAku%20mau%20tanya%20mengenai%20trip%20di%20VW%20Wisata%20Borobudur";
-
-  const whatsappMobileLink = `https://wa.me/${whatsapp}&text=${message}`;
-  const whatsappWebLink = `https://web.whatsapp.com/send?phone=${whatsapp}&text=${message}&type=phone_number&app_absent=0`;
 
   return (
     <section id="contact-us">
@@ -24,7 +22,7 @@ export default function Contact() {
               </div>
 
               <a
-                href={isMobile ? whatsappMobileLink : whatsappWebLink}
+                href={sendToWhatsapp({ isMobile: isMobile, message: message })}
                 target="_blank"
                 rel="noreferrer"
                 className="relative mt-5 md:mt-0 self-end py-3 px-5 text-center rounded-lg transition shadow-xl bg-white bg-opacity-30 backdrop-blur-xl hover:bg-white hover:bg-opacity-40 active:bg-white active:bg-opacity-50"
