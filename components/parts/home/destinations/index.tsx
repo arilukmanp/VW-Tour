@@ -7,6 +7,7 @@ import {
 import { HiBadgeCheck } from "react-icons/hi";
 import { useCartContext } from "lib/context/cart/CartStore";
 import { useDestinationContext } from "lib/context/destinations/destinationsStore";
+import TitleOrnament from "components/ornament";
 
 export default function Destinations() {
   const destinationToShow = [
@@ -24,31 +25,7 @@ export default function Destinations() {
         <div className="2xl:mx-auto 2xl:container w-full lg:px-8 md:px-12 py-24 px-4 mx-1 sm:px-12">
           <div className="mb-12 md:mx-auto w-full text-center lg:max-w-2xl">
             <h2 className="max-w-lg mb-4 font-sans text-3xl font-semibold leading-none tracking-tight text-gray-900 sm:text-4xl mx-auto">
-              <span className="relative inline-block">
-                <svg
-                  viewBox="0 0 52 24"
-                  fill="currentColor"
-                  className="absolute text-lime-500 top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-                >
-                  <defs>
-                    <pattern
-                      id="df31b9f6-a505-42f8-af91-d2b7c3218e5c"
-                      x="0"
-                      y="0"
-                      width=".135"
-                      height=".30"
-                    >
-                      <circle cx="1" cy="1" r=".7" />
-                    </pattern>
-                  </defs>
-                  <rect
-                    fill="url(#df31b9f6-a505-42f8-af91-d2b7c3218e5c)"
-                    width="52"
-                    height="24"
-                  />
-                </svg>
-                <span className="relative">Pilihan Destinasi</span>
-              </span>
+              <TitleOrnament title="Pilihan Destinasi" />
             </h2>
             <p className="mx-auto leading-relaxed text-base text-gray-500">
               Mau destinasi edukasi atau wisata ikonik, semuanya ada!
