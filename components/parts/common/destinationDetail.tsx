@@ -10,7 +10,7 @@ import { useDestinationContext } from "lib/context/destinations/destinationsStor
 import { DestinationInterface } from "lib/models/destinations";
 import { DestinationCategory } from "lib/types";
 import { KFormatter } from "lib/utils/currencyFormatter";
-import Alert from "./alert";
+import Alert from "components/alert";
 
 interface ContentInterface {
   data: DestinationInterface;
@@ -127,34 +127,6 @@ function Content(props: ContentInterface) {
     dismissDetail();
   }
 
-  const AdditionalInformation = () => {
-    let isEducation = data.category == DestinationCategory.Education;
-    let isRestaurant = data.category == DestinationCategory.Resto;
-    let isTour = data.category == DestinationCategory.Tour;
-    let hasAdditionalPrice = Boolean(data?.price);
-
-    if (isEducation && hasAdditionalPrice) {
-      return (
-        <p>
-          Terdapat tambahan biaya sekitar Rp{" "}
-          <span className="font-semibold">{KFormatter(data.price!)}</span>/orang
-          apabila ingin praktik
-        </p>
-      );
-    } else if (isTour && hasAdditionalPrice) {
-      return (
-        <p>
-          Terdapat tambahan biaya untuk tiket masuk sekitar Rp{" "}
-          <span className="font-semibold">{KFormatter(data.price!)}</span>/orang
-        </p>
-      );
-    } else if (isRestaurant) {
-      return <p>Biaya tour tidak termasuk makan dan minum di tempat ini</p>;
-    } else {
-      return <p>Tidak ada biaya tambahan untuk destinasi ini</p>;
-    }
-  };
-
   return (
     <>
       <div className="p-4 mx-auto text-gray-600 body-font overflow-hidden">
@@ -205,7 +177,7 @@ function Content(props: ContentInterface) {
 
               <div className="flex flex-row items-start text-xs text-orangeSoft mt-4">
                 <div className="text-sm leading-tight mr-0.5">*</div>
-                <AdditionalInformation />
+                <AdditionalInformation data={data} />
               </div>
 
               <div className="flex border-t-2 border-gray-100 pt-5 mt-5">
@@ -228,4 +200,32 @@ function Content(props: ContentInterface) {
       </Alert>
     </>
   );
+}
+
+function AdditionalInformation({ data }: { data: DestinationInterface }) {
+  let isEducation = data.category == DestinationCategory.Education;
+  let isRestaurant = data.category == DestinationCategory.Resto;
+  let isTour = data.category == DestinationCategory.Tour;
+  let hasAdditionalPrice = Boolean(data?.price);
+
+  if (isEducation && hasAdditionalPrice) {
+    return (
+      <p>
+        Terdapat tambahan biaya sekitar Rp{" "}
+        <span className="font-semibold">{KFormatter(data.price!)}</span>/orang
+        apabila ingin praktik
+      </p>
+    );
+  } else if (isTour && hasAdditionalPrice) {
+    return (
+      <p>
+        Terdapat tambahan biaya untuk tiket masuk sekitar Rp{" "}
+        <span className="font-semibold">{KFormatter(data.price!)}</span>/orang
+      </p>
+    );
+  } else if (isRestaurant) {
+    return <p>Biaya tour tidak termasuk makan dan minum di tempat ini</p>;
+  } else {
+    return <p>Tidak ada biaya tambahan untuk destinasi ini</p>;
+  }
 }
