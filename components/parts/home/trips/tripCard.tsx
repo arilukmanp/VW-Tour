@@ -45,7 +45,7 @@ export default function TripCard({ data }: TripCardInterface) {
         </div>
 
         <div
-          className={`p-4 pt-3
+          className={`flex flex-1 flex-col p-4 pt-3
           ${!isSelectedTrip && "border rounded-t-none border-t-0 rounded-xl"}`}
         >
           <h3 className="mb-2.5 text-xl font-semibold text-slate-800">
@@ -63,20 +63,18 @@ export default function TripCard({ data }: TripCardInterface) {
               </div>
             </div>
 
-            <div className="">
-              <div className="flex items-center">
-                <div className="flex flex-row bg-slate-100 bg-opacity-90 rounded-md px-4 py-1.5 items-center">
-                  <FiMapPin size={13} className="mr-2" />
-                  <p className="mt-0.5 text-xs font-semibold">
-                    {data.totalDestination}
-                    <span className="font-light"> destinasi</span>
-                  </p>
-                </div>
+            <div className="flex items-center">
+              <div className="flex flex-row bg-slate-100 bg-opacity-90 rounded-md px-4 py-1.5 items-center">
+                <FiMapPin size={13} className="mr-2" />
+                <p className="mt-0.5 text-xs font-semibold">
+                  {data.totalDestination}
+                  <span className="font-light"> destinasi</span>
+                </p>
               </div>
             </div>
           </div>
 
-          <p className="text-sm text-gray-500 mt-3 mb-3 md:mb-8">
+          <p className="flex flex-1 text-sm text-gray-500 pb-2 md:pb-8">
             {data.description}
           </p>
 
