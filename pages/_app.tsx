@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <CartProvider>
       <DestinationsProvider>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
         <DestinationDetail />
       </DestinationsProvider>
       <Analytics />

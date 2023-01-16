@@ -37,7 +37,12 @@ export default function DestinationDetail() {
 
   if (isMobile) {
     return (
-      <BottomSheet open={isShowedDetail} onDismiss={() => dismissDetail()}>
+      <BottomSheet
+        open={isShowedDetail}
+        onDismiss={dismissDetail}
+        blocking
+        expandOnContentDrag
+      >
         <Content
           data={destination}
           selectedIdxImage={selectedIdxImage}

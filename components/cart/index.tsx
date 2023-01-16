@@ -75,7 +75,12 @@ export default function Cart({ isShow, onDismiss }: CartInterface) {
 
   return (
     <>
-      <BottomSheet open={isShow} onDismiss={onDismiss} blocking={true}>
+      <BottomSheet
+        open={isShow}
+        onDismiss={onDismiss}
+        blocking
+        expandOnContentDrag
+      >
         <div className="flex flex-col">
           <div className="bg-white relative shadow-2xl shadow-gray-300 rounded-3xl p-4 mx-4 my-2">
             <div className="flex-none sm:flex">
