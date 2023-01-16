@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 import useDestinationsReducer from "./destinationsReducer";
 import { DestinationsContext } from "./destinationsStore";

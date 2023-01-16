@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { AdditionalInterface } from "lib/models/additionals";
 import { KFormatter } from "lib/utils/currencyFormatter";

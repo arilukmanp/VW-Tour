@@ -1,3 +1,5 @@
+"use client";
+
 import { DestinationInterface } from "lib/models/destinations";
 import { useCallback, useReducer } from "react";
 

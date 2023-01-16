@@ -1,3 +1,5 @@
+"use client";
+
 import { ReactNode } from "react";
 import { CartContext } from "./CartStore";
 import useCartReducer from "./CartReducer";

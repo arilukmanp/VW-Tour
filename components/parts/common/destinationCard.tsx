@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { HiBadgeCheck } from "react-icons/hi";
 import { DestinationInterface } from "lib/models/destinations";

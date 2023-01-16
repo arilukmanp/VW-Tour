@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useReducer } from "react";
 import { TripInterface } from "lib/models/trip";
 import { AdditionalInterface } from "lib/models/additionals";
