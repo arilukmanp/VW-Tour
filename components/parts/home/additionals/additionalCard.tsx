@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback } from "react";
 import { AdditionalInterface } from "lib/models/additionals";
 import { KFormatter } from "lib/utils/currencyFormatter";
 import { useCartContext } from "lib/context/cart/CartStore";
@@ -11,24 +11,20 @@ interface AdditionalCardInterface {
 
 export default function AdditionalCard({ data }: AdditionalCardInterface) {
   const { additionals, addAdditional, removeAdditional } = useCartContext();
-  const [isSelected, setIsSelected] = useState(false);
 
-  useEffect(() => {
-    let isFoundAdditional = Boolean(
-      additionals.find((additional) => additional?.data?.item == data.item)
-    );
-    setIsSelected(isFoundAdditional);
+  const isSelected: boolean = Boolean(
+    additionals.find((additional) => additional?.data?.item == data.item)
+  );
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [additionals]);
-
-  function onSelect() {
+  const onSelect = useCallback(() => {
     if (isSelected) {
       removeAdditional(data);
     } else {
       addAdditional(data);
     }
-  }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [additionals]);
 
   return (
     <div
