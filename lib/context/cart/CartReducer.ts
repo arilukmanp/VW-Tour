@@ -65,11 +65,12 @@ export default function useCartReducer(): ReducerType {
         };
 
       case "REMOVE_DESTINATION":
-        let indexDestination = state.destinations.indexOf(action.destination);
-        return {
-          ...state,
-          destinations: [...state.destinations.splice(indexDestination, 1)],
-        };
+        const deletedDestinations: DestinationInterface[] =
+          state.destinations.filter(
+            (destination) => destination.title != action.destination.title
+          );
+
+        return { ...state, destinations: deletedDestinations };
 
       case "ADD_ADDITIONAL":
         return {
