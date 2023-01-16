@@ -91,27 +91,30 @@ export default function useCartReducer(): ReducerType {
 
       case "INCREASE_ADDITIONAL":
         const increasedAdditionals: AdditionalCartInterface[] =
-          state.additionals.map((additional) => {
-            if (additional.data.item == action.additional.item) {
-              return { ...additional, amount: additional.amount++ };
-            }
-            return additional;
-          });
+          state.additionals;
+        const increaseIndex = increasedAdditionals.findIndex(
+          (additional) => additional.data.item == action.additional.item
+        );
+
+        if (increaseIndex >= 0) increasedAdditionals[increaseIndex].amount++;
 
         return { ...state, additionals: increasedAdditionals };
 
       case "DECREASE_ADDITIONAL":
         const decreasedAdditionals: AdditionalCartInterface[] =
-          state.additionals.map((additional, index) => {
-            if (additional.data.item == action.additional.item) {
-              if (additional.amount <= 1) {
-                state.additionals.splice(index, 1);
-              } else {
-                return { ...additional, amount: additional.amount-- };
-              }
-            }
-            return additional;
-          });
+          state.additionals;
+        const decreaseIndex = decreasedAdditionals.findIndex(
+          (additional) => additional.data.item == action.additional.item
+        );
+
+        if (decreaseIndex >= 0) decreasedAdditionals[decreaseIndex].amount--;
+
+        if (decreasedAdditionals[decreaseIndex].amount <= 0) {
+          const removedAdditionals = decreasedAdditionals.filter(
+            (additional) => additional.data.item != action.additional.item
+          );
+          return { ...state, additionals: removedAdditionals };
+        }
 
         return { ...state, additionals: decreasedAdditionals };
     }
