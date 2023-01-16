@@ -82,12 +82,9 @@ export default function useCartReducer(): ReducerType {
 
       case "REMOVE_ADDITIONAL":
         const deletedAdditionals: AdditionalCartInterface[] =
-          state.additionals.map((additional, index) => {
-            if (additional.data.item == action.additional.item) {
-              state.additionals.splice(index, 1);
-            }
-            return additional;
-          });
+          state.additionals.filter(
+            (additional) => additional.data.item != action.additional.item
+          );
 
         return { ...state, additionals: deletedAdditionals };
 
