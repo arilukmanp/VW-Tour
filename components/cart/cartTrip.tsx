@@ -1,24 +1,14 @@
-import { useState } from "react";
+"use client";
+
 import { useCartContext } from "lib/context/cart/CartStore";
 import { currencyFormatter } from "lib/utils/currencyFormatter";
 
 export default function CartTrip() {
-  const { people, setPeople, trip } = useCartContext();
-  const [totalCar, setTotalCar] = useState(1);
-  const [totalAmount, setTotalAmount] = useState(trip.price);
+  const { people, setPeople, car, trip } = useCartContext();
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     let value = event.target.value;
-    setPeople(parseInt(value));
-
-    if (parseInt(value) >= 4) {
-      let calculatedCar = Math.ceil(parseInt(value) / 4);
-      setTotalCar(calculatedCar);
-      setTotalAmount(trip.price * calculatedCar);
-    } else {
-      setTotalCar(1);
-      setTotalAmount(trip.price);
-    }
+    setPeople(value);
   }
 
   return (
@@ -40,12 +30,12 @@ export default function CartTrip() {
                     Rp
                   </h2>
                   <span className="text-xs font-medium text-cyan-600">
-                    {currencyFormatter(totalAmount)}
+                    {currencyFormatter(trip.price)}
                   </span>
                 </div>
                 <span className="text-[10px] text-slate-500 mx-2">x</span>
                 <span className="text-xs font-medium mr-1 text-lime-500">
-                  {`${totalCar} Unit VW`}
+                  {`${car} Unit VW`}
                 </span>
               </div>
             </div>

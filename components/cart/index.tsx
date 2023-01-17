@@ -20,8 +20,7 @@ interface CartInterface {
 export default function Cart({ isShow, onDismiss }: CartInterface) {
   const isMobile = useScreenMobile();
   const sendToWhatsapp = useWhatsapp();
-  const { people, trip, destinations, additionals } = useCartContext();
-  const [estimatedCar, setEstimatedCar] = useState(1);
+  const { people, car, trip, destinations, additionals } = useCartContext();
   const [selectedDestinations, setSelectedDestinations] = useState("");
   const [selectedAdditionals, setSelectedAdditionals] = useState("");
   const [total, setTotal] = useState(0);
@@ -29,13 +28,11 @@ export default function Cart({ isShow, onDismiss }: CartInterface) {
 
   const waMessage = `Halo%20admin,%0ASaya%20mau%20booking%20trip%20dengan%20detail:%0A%0APaket%20Wisata:%20${
     trip.title
-  }%0AJumlah%20Orang:%20${people}%0AJumlah%20Unit:%20${estimatedCar}%0ADestinasi:%20${selectedDestinations}%0ATambahan:%20${selectedAdditionals}%0AEstimasi%20Total:%20Rp%20${currencyFormatter(
+  }%0AJumlah%20Orang:%20${people}%0AJumlah%20Unit:%20${car}%0ADestinasi:%20${selectedDestinations}%0ATambahan:%20${selectedAdditionals}%0AEstimasi%20Total:%20Rp%20${currencyFormatter(
     total
   )}`;
 
   useEffect(() => {
-    const tourist: number = people ?? 1;
-    const car: number = Math.ceil(tourist / 4) ?? 1;
     const tripPrice: number = trip.price * car;
     const additionalsPrice: number = additionals.reduce(
       (acc, curr) => acc + curr.data.price * curr.amount,
@@ -57,7 +54,6 @@ export default function Cart({ isShow, onDismiss }: CartInterface) {
       })
       .join(", ");
 
-    setEstimatedCar(car);
     setSelectedDestinations(dest);
     setSelectedAdditionals(addt.length > 0 ? addt : "-");
     setTotal(tripPrice + additionalsPrice);
