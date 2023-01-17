@@ -12,6 +12,7 @@ export interface AdditionalCartInterface {
 
 type CartType = {
   people: number | null;
+  car: number;
   trip: TripInterface;
   destinations: DestinationInterface[];
   additionals: AdditionalCartInterface[];
@@ -29,7 +30,8 @@ type ActionType =
 
 type ReducerType = {
   people: number | null;
-  setPeople: (people: number) => void;
+  setPeople: (people: string) => void;
+  car: number;
   trip: TripInterface;
   setTrip: (trip: TripInterface) => void;
   destinations: DestinationInterface[];
@@ -44,6 +46,7 @@ type ReducerType = {
 
 const initialCartData: CartType = {
   people: null,
+  car: 1,
   trip: {} as TripInterface,
   destinations: [] as DestinationInterface[],
   additionals: [] as AdditionalCartInterface[],
@@ -53,7 +56,9 @@ export default function useCartReducer(): ReducerType {
   const reducer = (state: CartType, action: ActionType) => {
     switch (action.type) {
       case "SET_PEOPLE":
-        return { ...state, people: action.people };
+        const input = action.people;
+        const estimatedCar: number = input ? Math.ceil(input / 4) : 1;
+        return { ...state, people: action.people, car: estimatedCar };
 
       case "SET_TRIP":
         return { ...state, trip: action.trip };
@@ -120,13 +125,11 @@ export default function useCartReducer(): ReducerType {
     }
   };
 
-  const [{ people, trip, destinations, additionals }, dispatch] = useReducer(
-    reducer,
-    initialCartData
-  );
+  const [{ people, car, trip, destinations, additionals }, dispatch] =
+    useReducer(reducer, initialCartData);
 
-  const setPeople = useCallback((people: number) => {
-    dispatch({ type: "SET_PEOPLE", people: people });
+  const setPeople = useCallback((people: string) => {
+    dispatch({ type: "SET_PEOPLE", people: people ? parseInt(people) : 0 });
   }, []);
 
   const setTrip = useCallback((trip: TripInterface) => {
@@ -160,6 +163,7 @@ export default function useCartReducer(): ReducerType {
   return {
     people,
     setPeople,
+    car,
     trip,
     setTrip,
     destinations,
