@@ -8,8 +8,24 @@ import Hero from "components/parts/home/hero";
 import Trip from "components/parts/home/trips";
 import Footer from "layouts/footer";
 import HeadComponent from "components/parts/common/head";
+import { tripData, TripInterface } from "lib/models/trip";
+import {
+  DestinationInterface,
+  destinationsData,
+} from "lib/models/destinations";
+import { AdditionalInterface, additionalsData } from "lib/models/additionals";
+import { faqData, FaqInterface } from "lib/models/faq";
 
-export default function Home() {
+interface Props {
+  trip: TripInterface[];
+  destinations: DestinationInterface[];
+  additionals: AdditionalInterface[];
+  faq: FaqInterface[];
+}
+
+export default function Home(props: Props) {
+  const { trip, destinations, additionals, faq } = props;
+
   return (
     <>
       <HeadComponent
@@ -20,14 +36,25 @@ export default function Home() {
       <main>
         <Hero />
         <About />
-        <Trip />
-        <Destinations />
-        <Additionals />
+        <Trip data={trip} />
+        <Destinations data={destinations} />
+        <Additionals data={additionals} />
         <Contact />
-        <Faq />
+        <Faq data={faq} />
         <Footer />
         <Fab />
       </main>
     </>
   );
+}
+
+export function getStaticProps() {
+  return {
+    props: {
+      trip: tripData,
+      destinations: destinationsData,
+      additionals: additionalsData,
+      faq: faqData,
+    },
+  };
 }

@@ -1,7 +1,7 @@
-import { tripData } from "lib/models/trip";
+import { TripInterface } from "lib/models/trip";
 import TripCard from "./tripCard";
 
-export default function Trip() {
+export default function Trip({ data }: { data: TripInterface[] }) {
   return (
     <section id="trip" className="bg-whiteBone">
       <div className="text-gray-600 overflow-hidden">
@@ -16,7 +16,7 @@ export default function Trip() {
           </div>
 
           <div className="flex flex-wrap -m-4 place-content-center">
-            {tripData.map((trip, index) => (
+            {data.map((trip, index) => (
               <TripCard key={index.toString()} data={trip} />
             ))}
           </div>

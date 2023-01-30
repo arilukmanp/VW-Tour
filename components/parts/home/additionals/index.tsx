@@ -1,7 +1,11 @@
+import { AdditionalInterface } from "lib/models/additionals";
 import AdditionalCard from "./additionalCard";
-import { additionalsData } from "lib/models/additionals";
 
-export default function Additionals() {
+interface Props {
+  data: AdditionalInterface[];
+}
+
+export default function Additionals({ data }: Props) {
   return (
     <section id="additionals">
       <div className="bg-white">
@@ -17,7 +21,7 @@ export default function Additionals() {
           </div>
 
           <div className="mt-6 space-y-3 xl:mt-12">
-            {additionalsData.map((additional, index) => (
+            {data.map((additional, index) => (
               <AdditionalCard key={index.toString()} data={additional} />
             ))}
           </div>

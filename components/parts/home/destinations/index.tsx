@@ -2,16 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import {
-  destinationsData,
-  DestinationInterface,
-} from "lib/models/destinations";
+import { DestinationInterface } from "lib/models/destinations";
 import { HiBadgeCheck } from "react-icons/hi";
 import { useCartContext } from "lib/context/cart/CartStore";
 import { useDestinationContext } from "lib/context/destinations/destinationsStore";
 import TitleOrnament from "components/ornament";
 
-export default function Destinations() {
+interface Props {
+  data: DestinationInterface[];
+}
+
+export default function Destinations({ data }: Props) {
   const destinationToShow = [
     { index: 3, imgIndex: 0 },
     { index: 9, imgIndex: 0 },
@@ -43,7 +44,7 @@ export default function Destinations() {
               <div className="sm:flex items-center justify-between gap-x-4">
                 <div className="sm:w-1/2 relative">
                   <DestinationThumbnail
-                    data={destinationsData[destinationToShow[0].index]}
+                    data={data[destinationToShow[0].index]}
                     imgIndex={destinationToShow[0].imgIndex}
                     viewMode={ThumbnailView.Small}
                   />
@@ -51,7 +52,7 @@ export default function Destinations() {
 
                 <div className="sm:w-1/2 sm:mt-0 mt-4 relative">
                   <DestinationThumbnail
-                    data={destinationsData[destinationToShow[1].index]}
+                    data={data[destinationToShow[1].index]}
                     imgIndex={destinationToShow[1].imgIndex}
                     viewMode={ThumbnailView.Small}
                   />
@@ -60,7 +61,7 @@ export default function Destinations() {
 
               <div className="mt-4">
                 <DestinationThumbnail
-                  data={destinationsData[destinationToShow[2].index]}
+                  data={data[destinationToShow[2].index]}
                   imgIndex={destinationToShow[2].imgIndex}
                   viewMode={ThumbnailView.Big}
                 />
@@ -69,7 +70,7 @@ export default function Destinations() {
 
             <div className="lg:w-1/2 lg:ml-4 lg:mt-0 mt-4 lg:flex flex-col justify-between">
               <DestinationThumbnail
-                data={destinationsData[destinationToShow[3].index]}
+                data={data[destinationToShow[3].index]}
                 imgIndex={destinationToShow[3].imgIndex}
                 viewMode={ThumbnailView.Big}
               />
@@ -77,7 +78,7 @@ export default function Destinations() {
               <div className="sm:flex items-center justify-between gap-x-4 mt-4">
                 <div className="w-full relative">
                   <DestinationThumbnail
-                    data={destinationsData[destinationToShow[4].index]}
+                    data={data[destinationToShow[4].index]}
                     imgIndex={destinationToShow[4].imgIndex}
                     viewMode={ThumbnailView.Small}
                   />
@@ -85,7 +86,7 @@ export default function Destinations() {
 
                 <div className="w-full sm:mt-0 mt-4 relative">
                   <DestinationThumbnail
-                    data={destinationsData[destinationToShow[5].index]}
+                    data={data[destinationToShow[5].index]}
                     imgIndex={destinationToShow[5].imgIndex}
                     viewMode={ThumbnailView.Small}
                   />

@@ -1,8 +1,12 @@
 import DestinationCard from "components/parts/common/destinationCard";
 import TitleOrnament from "components/ornament";
-import { destinationsData } from "lib/models/destinations";
+import { DestinationInterface } from "lib/models/destinations";
 
-export default function DestinationBody() {
+interface Props {
+  data: DestinationInterface[];
+}
+
+export default function DestinationBody({ data }: Props) {
   return (
     <div className="flex justify-center items-center bg-white">
       <div className="2xl:mx-auto 2xl:container w-full lg:px-8 md:px-12 py-24 px-4 mx-1 sm:px-12">
@@ -20,7 +24,7 @@ export default function DestinationBody() {
         </div>
 
         <div className="flex flex-wrap justify-center md:mt-12 mt-8">
-          {destinationsData.map((destination, index) => (
+          {data.map((destination, index) => (
             <DestinationCard key={index.toString()} data={destination} />
           ))}
         </div>

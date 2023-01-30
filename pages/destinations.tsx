@@ -1,11 +1,18 @@
-import Head from "next/head";
 import Footer from "layouts/footer";
 import Header from "layouts/header";
 import DestinationBody from "components/parts/destination";
 import Fab from "components/fab";
 import HeadComponent from "components/parts/common/head";
+import {
+  DestinationInterface,
+  destinationsData,
+} from "lib/models/destinations";
 
-export default function Destinations() {
+interface Props {
+  destinations: DestinationInterface[];
+}
+
+export default function Destinations({ destinations }: Props) {
   return (
     <>
       <HeadComponent
@@ -15,10 +22,16 @@ export default function Destinations() {
 
       <main>
         <Header />
-        <DestinationBody />
+        <DestinationBody data={destinations} />
         <Footer />
         <Fab />
       </main>
     </>
   );
+}
+
+export function getStaticProps() {
+  return {
+    props: { destinations: destinationsData },
+  };
 }
