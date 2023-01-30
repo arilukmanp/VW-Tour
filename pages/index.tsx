@@ -7,24 +7,15 @@ import Faq from "components/parts/home/faq";
 import Hero from "components/parts/home/hero";
 import Trip from "components/parts/home/trips";
 import Footer from "layouts/footer";
-import Head from "next/head";
+import HeadComponent from "components/parts/common/head";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>VW Wisata Borobudur - Trip bareng keluarga</title>
-        <meta name="theme-color" content="#fff" />
-        <meta
-          name="description"
-          content="Jangan lewatkan pengalaman menjelajahi keindahan dan budaya di sekitar Borobudur dengan cara yang menyenangkan bersama VW Wisata Borobudur!"
-        />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <HeadComponent
+        title="VW Wisata Borobudur - Trip bareng keluarga"
+        description="Jangan lewatkan pengalaman menjelajahi keindahan dan budaya di sekitar Borobudur dengan cara yang menyenangkan bersama VW Wisata Borobudur. Rencanakan perjalanan impianmu sekarang!"
+      />
 
       <main>
         <Hero />
