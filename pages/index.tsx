@@ -30,7 +30,7 @@ export default function Home(props: Props) {
     <>
       <HeadComponent
         title="VW Wisata Borobudur - Trip bareng keluarga"
-        description="Jangan lewatkan pengalaman menjelajahi keindahan dan budaya di sekitar Borobudur dengan cara yang menyenangkan bersama VW Wisata Borobudur. Rencanakan perjalanan impianmu sekarang!"
+        description="Tour dengan mobil VW keliling menjelajahi keindahan dan budaya di Borobudur dengan cara yang menyenangkan bersama VW Wisata Borobudur. Rencanakan perjalanan impianmu sekarang juga!"
       />
 
       <main>
