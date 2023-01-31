@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: [],
+    minimumCacheTTL: 31536000,
   },
 };
 

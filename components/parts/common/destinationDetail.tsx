@@ -168,6 +168,8 @@ function Content(props: ContentInterface) {
                   {data.images.map((image, index) => (
                     <img
                       key={index.toString()}
+                      width="64px"
+                      height="64px"
                       onClick={() => setSelectedIdxImage(index)}
                       src={`/images/destinations/${image}`}
                       alt={`Foto ${data.title}`}
