@@ -5,9 +5,9 @@ export default function About() {
         <div className="2xl:mx-auto 2xl:container lg:px-8 lg:py-16 md:py-12 md:px-12 py-9 px-4 mx-1 sm:px-12">
           <div className="lg:flex md:mt-12 mt-8 items-center">
             <div className="flex lg:w-1/2 lg:ml-4 lg:mb-0 mb-10 flex-col justify-center order-last">
-              <h1 className="text-lime-500 text-sm font-medium mb-2">
+              <h3 className="text-lime-500 text-sm font-medium mb-2">
                 Tentang Kami
-              </h1>
+              </h3>
               <h1 className="text-slate-800 font-semibold text-3xl mb-5 lg:mb-6">
                 VW Wisata Borobudur
               </h1>

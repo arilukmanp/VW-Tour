@@ -12,9 +12,9 @@ export default function Hero() {
             <div className="grid gap-10 lg:grid-cols-2">
               <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
                 <div className="max-w-xl mb-2">
-                  <h3 className="max-w-lg mb-6 font-bold text-4xl text-white">
+                  <h2 className="max-w-lg mb-6 font-bold text-4xl text-white">
                     Jelajah alam dan budaya di Borobudur dengan VW
-                  </h3>
+                  </h2>
                   <p className="mt-3 mb-10 text-white md:text-lg">
                     Waktunya untuk <i>healing</i> dengan berwisata menikmati
                     pemandangan alam, budaya, dan seni di Borobudur dengan VW
