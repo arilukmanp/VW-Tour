@@ -28,7 +28,7 @@ export default function Footer() {
 
           <div className="flex flex-col items-center sm:flex-row sm:justify-between">
             <p className="text-sm text-gray-400">
-              {`© Copyright VW Wisata Borobudur ${year}. All Rights Reserved.`}
+              {`© Copyright PT Explore Wisata Borobudur ${year}. All Rights Reserved.`}
             </p>
 
             <div className="flex mt-3 -mx-2 sm:mt-0">
