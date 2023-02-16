@@ -6,7 +6,7 @@ export interface FaqInterface {
 export const faqData: FaqInterface[] = [
   {
     question: "Berapa harga trip VW Borobudur?",
-    answer: "Harga mulai dari 350k untuk setiap VW",
+    answer: "Harga mulai dari 400k untuk setiap VW",
   },
   {
     question: "Dalam satu VW muat berapa orang?",

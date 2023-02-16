@@ -95,7 +95,7 @@ export const destinationsData: DestinationInterface[] = [
     location: "Taman Wisata Candi Borobudur",
   },
   {
-    category: DestinationCategory.Education,
+    category: DestinationCategory.Tour,
     images: [
       "taman-kelinci/kelinci_1.webp",
       "taman-kelinci/kelinci_2.webp",

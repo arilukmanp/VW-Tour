@@ -18,8 +18,8 @@ export const additionalsData: AdditionalInterface[] = [
   },
   {
     item: AdditionalItem.Flare,
-    title: "Flare/Suar",
-    receive: ["1 Suar"],
+    title: "Smoke Bomb",
+    receive: ["1 Smoke Bomb"],
     price: 15_000,
   },
   {
