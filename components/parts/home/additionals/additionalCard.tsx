@@ -39,7 +39,7 @@ export default function AdditionalCard({ data }: AdditionalCardInterface) {
         <ChecklistIcon isSelected={isSelected} />
 
         <div className="flex flex-col items-start sm:mx-5 space-y-1">
-          <h2 className="text-lg font-medium text-gray-700">
+          <h2 className="mb-3 text-lg font-medium leading-none text-gray-700">
             {data.title}{" "}
             {data.device && (
               <span className="text-[10px] font-normal text-lime-500">{`(${data.device})`}</span>
