@@ -5,6 +5,7 @@ import Destinations from "components/parts/home/destinations";
 import Fab from "components/fab";
 import Faq from "components/parts/home/faq";
 import Hero from "components/parts/home/hero";
+import Maps from "components/parts/home/maps";
 import Trip from "components/parts/home/trips";
 import Footer from "layouts/footer";
 import HeadComponent from "components/parts/common/head";
@@ -41,6 +42,7 @@ export default function Home(props: Props) {
         <Additionals data={additionals} />
         <Contact />
         <Faq data={faq} />
+        <Maps />
         <Footer />
         <Fab />
       </main>
