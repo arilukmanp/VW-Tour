@@ -22,6 +22,8 @@ module.exports = {
       // },
       animation: {
         "bounce-short": "bounce-short 1s .5",
+        marquee: "marquee 25s linear infinite",
+        marquee2: "marquee2 25s linear infinite",
       },
       keyframes: {
         "bounce-short": {
@@ -33,6 +35,14 @@ module.exports = {
             transform: "translateY(0)",
             "animation-timing-function": "cubic-bezier(0, 0, 0.2, 1)",
           },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        marquee2: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0%)" },
         },
       },
     },
