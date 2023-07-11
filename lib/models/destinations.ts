@@ -89,9 +89,9 @@ export const destinationsData: DestinationInterface[] = [
       "dagi/dagi_3.webp",
       "dagi/dagi_4.webp",
     ],
-    title: "Dagi Hill by Manohara",
+    title: "Dagi Abhinaya by Manohara",
     description:
-      "Dagi Hill by Manohara merupakan resto yang menawarkan view candi dengan latar belakang pegunungan Menoreh di sisi selatan dari atas bukit Dagi, menikmati sajian masakan bertema outdoor picnic set.",
+      "Dagi Abhinaya by Manohara merupakan resto yang menawarkan view candi dengan latar belakang pegunungan Menoreh di sisi selatan dari atas bukit Dagi, menikmati sajian masakan bertema outdoor picnic set.",
     location: "Taman Wisata Candi Borobudur",
   },
   {
