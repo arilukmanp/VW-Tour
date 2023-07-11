@@ -1,3 +1,4 @@
+import LogoClouds from "components/parts/home/logo-clouds";
 import About from "components/parts/home/about";
 import Additionals from "components/parts/home/additionals";
 import Contact from "components/parts/home/contact";
@@ -16,8 +17,10 @@ import {
 } from "lib/models/destinations";
 import { AdditionalInterface, additionalsData } from "lib/models/additionals";
 import { faqData, FaqInterface } from "lib/models/faq";
+import { logoCloudsData, LogoCloudsInterface } from "lib/models/logo";
 
 interface Props {
+  logoClouds: LogoCloudsInterface[];
   trip: TripInterface[];
   destinations: DestinationInterface[];
   additionals: AdditionalInterface[];
@@ -25,7 +28,7 @@ interface Props {
 }
 
 export default function Home(props: Props) {
-  const { trip, destinations, additionals, faq } = props;
+  const { logoClouds, trip, destinations, additionals, faq } = props;
 
   return (
     <>
@@ -36,6 +39,7 @@ export default function Home(props: Props) {
 
       <main>
         <Hero />
+        <LogoClouds data={logoClouds} />
         <About />
         <Trip data={trip} />
         <Destinations data={destinations} />
@@ -53,6 +57,7 @@ export default function Home(props: Props) {
 export function getStaticProps() {
   return {
     props: {
+      logoClouds: logoCloudsData,
       trip: tripData,
       destinations: destinationsData,
       additionals: additionalsData,
