@@ -3,6 +3,7 @@
 
 import { Dispatch, Fragment, useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Dialog, Transition } from "@headlessui/react";
 import { BottomSheet } from "react-spring-bottom-sheet";
 import useScreenMobile from "lib/hooks/useScreenMobile";
@@ -107,7 +108,13 @@ function Content(props: ContentInterface) {
     if (!trip.category) {
       setAlertMessage(
         <span>
-          Silakan pilih <u>Paket Trip</u> terlebih dahulu
+          Silakan pilih{" "}
+          <Link href={"/#trip"}>
+            <button onClick={dismissDetail}>
+              <u>Paket Trip</u>
+            </button>
+          </Link>{" "}
+          terlebih dahulu
         </span>
       );
       setIsAlertShowed(true);
