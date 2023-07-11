@@ -20,7 +20,7 @@ export default function Alert(props: AlertInterface) {
     if (isShowed) {
       timer = setTimeout(() => {
         setIsShowed(false);
-      }, 2500);
+      }, 3000);
     }
 
     return () => {
