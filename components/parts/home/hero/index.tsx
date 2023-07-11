@@ -13,11 +13,12 @@ export default function Hero() {
               <div className="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
                 <div className="max-w-xl mb-2">
                   <h2 className="max-w-lg mb-6 font-bold text-4xl text-white">
-                    Jelajah alam dan budaya di Borobudur dengan VW
+                    Jelajah alam dan budaya di Borobudur dengan VW Safari
                   </h2>
                   <p className="mt-3 mb-10 text-white md:text-lg">
                     Waktunya untuk <i>healing</i> dengan berwisata menikmati
                     pemandangan alam, budaya, dan seni di Borobudur dengan VW
+                    Safari
                   </p>
                 </div>
 
