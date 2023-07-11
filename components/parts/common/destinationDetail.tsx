@@ -195,6 +195,14 @@ function Content(props: ContentInterface) {
                 <AdditionalInformation data={data} />
               </div>
 
+              {(data.title == "Dagi Abhinaya by Manohara" ||
+                data.title == "Enam Langit by Plataran") && (
+                <div className="flex flex-row items-start text-xs text-orangeSoft mt-1">
+                  <div className="text-sm leading-tight mr-0.5">*</div>
+                  <p>Perlu adanya reservasi untuk destinasi ini</p>
+                </div>
+              )}
+
               <div className="flex border-t-2 border-gray-100 pt-5 mt-5">
                 <button
                   onClick={() => onSelect()}
