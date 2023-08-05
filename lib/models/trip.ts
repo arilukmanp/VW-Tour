@@ -47,7 +47,7 @@ export const tripData: TripInterface[] = [
     title: "One Day",
     description:
       "Keliling perdesaan di sekitar Borobudur dan mengunjungi 5 pilihan destinasi wisata + makan siang + spot foto dengan durasi sekitar 9 jam.",
-    duration: 9,
+    duration: 8,
     totalDestination: 5,
     price: 1_200_000,
   },
@@ -57,7 +57,7 @@ export const tripData: TripInterface[] = [
     title: "Sunrise 1",
     description:
       "Nikmati keindahan sunrise di Punthuk Setumbu dan mengunjungi 1 pilihan destinasi wisata lainnya + spot foto dengan durasi sekitar 4 jam atau maksimal sampai pukul 8.",
-    duration: 4,
+    duration: 3,
     totalDestination: 1,
     price: 600_000,
   },
@@ -67,7 +67,7 @@ export const tripData: TripInterface[] = [
     title: "Sunrise 2",
     description:
       "Nikmati keindahan sunrise di Enam Langit dan mengunjungi 1 pilihan destinasi wisata lainnya + spot foto dengan durasi sekitar 4 jam atau maksimal sampai pukul 8.",
-    duration: 4,
+    duration: 3,
     totalDestination: 1,
     price: 650_000,
   },
