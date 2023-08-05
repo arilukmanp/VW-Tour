@@ -5,20 +5,31 @@ export interface LogoCloudsInterface {
 
 export const logoCloudsData: LogoCloudsInterface[] = [
   {
-    title: "Transistor",
-    image:
-      "https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg",
+    title: "Balkondes Borobudur",
+    image: "balkondes.png",
   },
   {
-    title: "Reform",
-    image: "https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg",
+    title: "Svarga",
+    image: "svarga.png",
   },
   {
-    title: "Tuple",
-    image: "https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg",
+    title: "Mobilmu",
+    image: "mobilmu.png",
   },
   {
-    title: "SavvyCal",
-    image: "https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg",
+    title: "Enam Langit",
+    image: "enam-langit.png",
+  },
+  {
+    title: "Bukit Rhema",
+    image: "bukit-rhema.png",
+  },
+  {
+    title: "Dagi Abhinaya",
+    image: "dagi.png",
+  },
+  {
+    title: "Nusaxa Creative",
+    image: "nusaxa.png",
   },
 ];
