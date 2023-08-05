@@ -70,7 +70,7 @@ export default function CartTrip() {
       {trip.category && (
         <h2 className="mt-4 px-1 text-[9px] font-light text-slate-500 mr-1">
           <span className="text-pink-400">*</span>
-          Anak di bawah 3 tahun tidak perlu dihitung
+          Anak di bawah 5 tahun (max 1 anak) tidak perlu dihitung
         </h2>
       )}
 
