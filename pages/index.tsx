@@ -39,8 +39,8 @@ export default function Home(props: Props) {
 
       <main>
         <Hero />
-        <LogoClouds data={logoClouds} />
         <About />
+        <LogoClouds data={logoClouds} />
         <Trip data={trip} />
         <Destinations data={destinations} />
         <Additionals data={additionals} />

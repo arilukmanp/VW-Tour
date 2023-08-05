@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="bg-whiteBone">
+    <section id="about" className="bg-whiteBone pb-6 lg:pb-10">
       <div className="flex justify-center items-center">
         <div className="2xl:mx-auto 2xl:container lg:px-8 lg:py-16 md:py-12 md:px-12 py-9 px-4 mx-1 sm:px-12">
           <div className="lg:flex md:mt-12 mt-8 items-center">
