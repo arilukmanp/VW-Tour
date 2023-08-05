@@ -43,6 +43,13 @@ export default function Footer() {
               </a>
             </div>
           </div>
+          <div className="flex justify-center mt-4 lg:mt-6">
+            <img
+              className="h-4 lg:h-6 object-contain"
+              src={"/explore-wisata-borobudur.png"}
+              alt={"PT Explore Wisata Borobudur"}
+            />
+          </div>
         </div>
       </footer>
     </section>
