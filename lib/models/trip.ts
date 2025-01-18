@@ -46,7 +46,7 @@ export const tripData: TripInterface[] = [
     image: "one-day.webp",
     title: "One Day",
     description:
-      "Keliling perdesaan di sekitar Borobudur dan mengunjungi 5 pilihan destinasi wisata + makan siang + spot foto dengan durasi sekitar 9 jam.",
+      "Keliling perdesaan di sekitar Borobudur dan mengunjungi 5 pilihan destinasi wisata + spot foto dengan durasi sekitar 9 jam.",
     duration: 8,
     totalDestination: 5,
     price: 1_200_000,
