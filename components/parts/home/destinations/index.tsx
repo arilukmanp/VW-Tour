@@ -146,7 +146,8 @@ function DestinationThumbnail(props: dataThumbnailInterface) {
         <Image
           src={`/images/destinations/${data.images[imgIndex]}`}
           alt={`Foto ${data.title}`}
-          layout={"fill"}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           quality={50}
           className={"rounded-lg object-cover"}
         />

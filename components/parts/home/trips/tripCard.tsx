@@ -41,7 +41,8 @@ export default function TripCard({ data }: TripCardInterface) {
               <Image
                 src={`/images/trip/${data.image}`}
                 alt={`Foto ${data.title}`}
-                layout={"fill"}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 quality={50}
                 className={"object-cover"}
               />
