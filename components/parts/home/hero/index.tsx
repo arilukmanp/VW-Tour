@@ -1,7 +1,7 @@
 import Header from "layouts/header";
 import Image from "next/image";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import heroImage from "public/images/bg_hero.jpg";
+import heroImage from "public/images/bg_hero.webp";
 
 export default function Hero() {
   return (
