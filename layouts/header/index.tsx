@@ -64,6 +64,7 @@ function Logo({ isMobile }: { isMobile: boolean }) {
       height={30}
       width={150}
       className="cursor-pointer object-contain"
+      priority
     />
   );
 }

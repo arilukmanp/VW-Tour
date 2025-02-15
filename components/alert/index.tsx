@@ -61,7 +61,12 @@ export default function Alert(props: AlertInterface) {
             {children}
           </span>
 
-          <div role="button" onClick={() => setIsShowed(false)} className="p-1">
+          <div
+            role="button"
+            onClick={() => setIsShowed(false)}
+            className="p-1"
+            aria-label="Close alert"
+          >
             <IoClose className="text-lg text-red-200" />
           </div>
         </div>

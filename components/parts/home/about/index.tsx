@@ -5,12 +5,12 @@ export default function About() {
         <div className="2xl:mx-auto 2xl:container lg:px-8 lg:py-16 md:py-12 md:px-12 py-9 px-4 mx-1 sm:px-12">
           <div className="lg:flex md:mt-12 mt-8 items-center">
             <div className="flex lg:w-1/2 lg:ml-4 lg:mb-0 mb-10 flex-col justify-center order-last">
-              <h3 className="text-lime-500 text-sm font-medium mb-2">
+              <p className="text-lime-500 text-sm font-medium mb-2">
                 Tentang Kami
-              </h3>
-              <h1 className="text-slate-800 font-semibold text-3xl mb-5 lg:mb-6">
+              </p>
+              <h2 className="text-slate-800 font-semibold text-3xl mb-5 lg:mb-6">
                 VW Wisata Borobudur
-              </h1>
+              </h2>
               <p className="text-slate-500 text-sm text-justify">
                 Wisata VW dilakukan dengan menaiki mobil klasik atau sering
                 disebut mobil Pak Camat pada tahun 1970 dengan sensasi atap
@@ -30,8 +30,9 @@ export default function About() {
             <div className="flex lg:w-1/2 xl:px-10 lg:px-5">
               <iframe
                 height="auto"
-                src="https://www.youtube.com/embed/9QVIEaWf6vM?controls=0&showinfo=0&modestbranding=0"
+                src="https://www.youtube-nocookie.com/embed/9QVIEaWf6vM?controls=0&showinfo=0&modestbranding=0"
                 title="About Us Video"
+                loading="lazy"
                 allowFullScreen
                 className="w-full md:mx-20 lg:mx-0 sm:block mx-auto aspect-video shadow-xl shadow-slate-300 rounded-xl"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

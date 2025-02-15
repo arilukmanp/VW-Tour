@@ -162,7 +162,7 @@ export default function TripCard({ data }: TripCardInterface) {
                     </p>
                   </div>
 
-                  <div className="flex mt-10">
+                  <div className="flex mt-10 justify-center">
                     <Link href={"/#destinations"}>
                       <button
                         onClick={() => setIsDialogOpen(false)}
