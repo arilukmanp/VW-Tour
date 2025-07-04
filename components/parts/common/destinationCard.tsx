@@ -29,7 +29,8 @@ export default function DestinationCard(props: { data: DestinationInterface }) {
           <Image
             src={`/images/destinations/${data.images[0]}`}
             alt={`Foto ÷${data.title}`}
-            layout={"fill"}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             quality={50}
             className={"rounded-lg object-cover"}
           />

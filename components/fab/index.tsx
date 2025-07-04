@@ -27,6 +27,7 @@ export default function Fab() {
         role={"button"}
         onClick={toogle}
         id="fab"
+        aria-label="Open Cart"
         className={`bottom-safe right-0 fixed mx-4 z-[1] cursor-pointer ${
           isAnyChange && "animate-bounce-short"
         }`}

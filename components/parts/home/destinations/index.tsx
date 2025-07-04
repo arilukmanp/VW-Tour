@@ -27,9 +27,9 @@ export default function Destinations({ data }: Props) {
       <div className="flex justify-center items-center">
         <div className="2xl:mx-auto 2xl:container w-full lg:px-8 md:px-12 py-24 px-4 mx-1 sm:px-12">
           <div className="mb-12 md:mx-auto w-full text-center lg:max-w-2xl">
-            <h3 className="max-w-lg mb-4 font-sans text-3xl font-semibold leading-none tracking-tight text-gray-900 sm:text-4xl mx-auto">
+            <h2 className="max-w-lg mb-4 font-sans text-3xl font-semibold leading-none tracking-tight text-gray-900 sm:text-4xl mx-auto">
               <TitleOrnament title="Pilihan Destinasi" />
-            </h3>
+            </h2>
             <p className="mx-auto leading-relaxed text-base text-gray-500">
               Mau destinasi edukasi atau wisata ikonik, semuanya ada!
             </p>
@@ -146,7 +146,8 @@ function DestinationThumbnail(props: dataThumbnailInterface) {
         <Image
           src={`/images/destinations/${data.images[imgIndex]}`}
           alt={`Foto ${data.title}`}
-          layout={"fill"}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           quality={50}
           className={"rounded-lg object-cover"}
         />
